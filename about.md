@@ -3,13 +3,15 @@ layout: page
 title: About
 ---
 
+![Photo of Martin Devillers.](/assets/about-me-martin-devillers.jpg)
+
 ## Who am I?
 
 My name is Martin Devillers and I am a Dutch stunt coder. Since the age of twelve, I have been busy tying the world together using a keyboard and a soldering iron. As with most computer junkies; my passion became my hobby; my hobby became my education and finally; my education became my job. As of 2007, I spent most of my time in the field designing solutions, crafting code and architecting ideas at various companies. Currently, I hold the position of [lead software engineer](http://www.linkedin.com/in/mdevillers) at a great Dutch IT Innovator called [Info Support](http://www.infosupport.com/). 
 
 ## How do you know all this stuff?
 
-I was taught marvelous computer wizardry at the [Radboud University of Nijmegen](http://www.ru.nl/english/), the same university that brought us [Erik Meijer](http://en.wikipedia.org/wiki/Erik_Meijer_(computer_scientist)). Apparently, I was good at paying attention in class, as I graduated with honors in 2011. Additionally, my [thesis](http://master.devillers.nl/) was [awarded most appealing thesis of the year](http://www.aiasoftware.com/index.php/en/press-releases/students-receive-aia-software-awards-2012-for-their-theses-on-yubikey-and-b/).
+I was taught marvelous computer wizardry at the [Radboud University of Nijmegen](http://www.ru.nl/english/), the same university that brought us [Erik Meijer](http://en.wikipedia.org/wiki/Erik_Meijer_%28computer_scientist%29). Apparently, I was good at paying attention in class, as I graduated with honors in 2011. Additionally, my [thesis](http://master.devillers.nl/) was [awarded most appealing thesis of the year](http://www.aiasoftware.com/index.php/en/press-releases/students-receive-aia-software-awards-2012-for-their-theses-on-yubikey-and-b/).
 
 Besides theory, I had the privilege of working together with some absolutely fabulously minded tech-heads. 
 
