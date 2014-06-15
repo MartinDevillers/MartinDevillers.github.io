@@ -1,0 +1,38 @@
+# Dependencies
+markdown:         redcarpet
+redcarpet:
+  extensions: ["tables"]
+
+pygments:         true
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            Martin Devillers
+tagline:          'Stunt Coder'
+url:              http://www.devillers.nl
+shorturl:         devillers.nl
+
+author:
+  name:           'Martin Devillers'
+  url:            http://www.linkedin.com/in/mdevillers
+
+paginate:         1
+
+# Custom vars
+version:          1.0.0
+
+github:
+  repo:           github.com/MartinDevillers/MartinDevillers.github.io
+
+# This is the list of pages to include in the header of the website.
+pages_list:       
+  About: '/about/'
+  Archive: '/archive/'
+  Feed: '/atom.xml'
+
+# Allow URL Redirects: 
+#  * https://help.github.com/articles/redirects-on-github-pages
+#gems:
+#  - jekyll-redirect-from
