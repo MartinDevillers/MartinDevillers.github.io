@@ -11,7 +11,7 @@ Thank you all for a wonderful day. At the bottom of this post are some picturesq
 
 ## What’s this all about?
 
-In 2011 I finished seven math-filled years at the [University of Computer Wizards in Nijmegen](http://www.ru.nl/icis/). As with most university degrees, I completed mine by writing a master’s thesis. The thesis, called “[Business Process Modeling as a means to bridge The Business-IT Divide](http://master.devillers.nl)”, was the result of seven months of research into the practical applications of model-building in organizations. During my graduation ceremony, I was surprised to hear that my thesis won the prize of Most Appealing Master Thesis 2011
+In 2011 I finished seven math-filled years at the [University of Computer Wizards in Nijmegen](http://www.ru.nl/icis/). As with most university degrees, I completed mine by writing a master’s thesis. The thesis, called “[Business Process Modeling as a means to bridge The Business-IT Divide](http://master.devillers.nl)”, was the result of seven months of research into the practical applications of model-building in organizations. During my graduation ceremony, I was surprised to hear that my thesis won the prize of Most Appealing Master Thesis 2012
 
 ## Less text, more photo’s!
 
