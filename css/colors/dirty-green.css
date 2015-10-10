@@ -1,0 +1,45 @@
+/* =================================================================== */
+/* Dirty Green #3b6e40
+====================================================================== */
+
+#top-line { background: #3b6e40; }
+#current { background-color: #3b6e40; border-right: 1px solid #3b6e40; }
+.ls-fullwidth .ls-nav-next:hover,
+.ls-fullwidth .ls-nav-prev:hover { background-color: #3b6e40; }
+.caption-color { background: #3b6e40; }
+.flexslider .flex-next:hover,
+.flexslider .flex-prev:hover { background-color: #3b6e40; }
+.arl.active:hover,
+.arr.active:hover { background-color: #3b6e40; }
+.portfolio-item:hover > figure > .item-description { border-top: 5px solid #3b6e40; }
+.highlight.color,
+.skill-bar-content { background: #3b6e40; }
+.dropcap,
+.tabs-nav li.active a,
+#breadcrumbs ul li a { color: #3b6e40; }
+.search-btn-widget { background-color: #3b6e40; }
+.tags a:hover { background: #3b6e40; }
+.latest-post-blog img:hover { background: #3b6e40; border: 1px solid #3b6e40; }
+.flickr-widget-blog a:hover { border: 5px solid #3b6e40; }
+.selected { color: #3b6e40 !important; }
+.filters-dropdown.active,
+#portfolio-navi a:hover { background-color: #3b6e40; }
+.button.gray:hover,
+.button.light:hover,
+.button.color,
+input[type="button"],
+input[type="submit"],
+input[type="button"]:focus,
+input[type="submit"]:focus { background:#3b6e40; }
+.tabs-nav li.active a { border-top: 1px solid #3b6e40; }
+.ui-accordion .ui-accordion-header-active:hover,
+.ui-accordion .ui-accordion-header-active { color: #3b6e40; }
+.ui-accordion-icon-active { background-color: #3b6e40; }
+.trigger.active a { color: #3b6e40; }
+.trigger.active .toggle-icon { background-color: #3b6e40; }
+.testimonials-author { color: #3b6e40; }
+.pagination .current { background: #3b6e40 !important; }
+.flickr-widget a:hover { border-color: #3b6e40; }
+.latest-shop-items img:hover { background: #3b6e40; border: 1px solid #3b6e40; }
+.increase-value { background: #3b6e40; }
+.ui-widget-header { background:#3b6e40; }

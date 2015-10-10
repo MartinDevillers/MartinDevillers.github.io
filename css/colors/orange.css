@@ -1,0 +1,45 @@
+/* =================================================================== */
+/* Orange #fa5b0f
+====================================================================== */
+
+#top-line { background: #fa5b0f; }
+#current { background-color: #fa5b0f; border-right: 1px solid #fa5b0f; }
+.ls-fullwidth .ls-nav-next:hover,
+.ls-fullwidth .ls-nav-prev:hover { background-color: #fa5b0f; }
+.caption-color { background: #fa5b0f; }
+.flexslider .flex-next:hover,
+.flexslider .flex-prev:hover { background-color: #fa5b0f; }
+.arl.active:hover,
+.arr.active:hover { background-color: #fa5b0f; }
+.portfolio-item:hover > figure > .item-description { border-top: 5px solid #fa5b0f; }
+.highlight.color,
+.skill-bar-content { background: #fa5b0f; }
+.dropcap,
+.tabs-nav li.active a,
+#breadcrumbs ul li a { color: #fa5b0f; }
+.search-btn-widget { background-color: #fa5b0f; }
+.tags a:hover { background: #fa5b0f; }
+.latest-post-blog img:hover { background: #fa5b0f; border: 1px solid #fa5b0f; }
+.flickr-widget-blog a:hover { border: 5px solid #fa5b0f; }
+.selected { color: #fa5b0f !important; }
+.filters-dropdown.active,
+#portfolio-navi a:hover { background-color: #fa5b0f; }
+.button.gray:hover,
+.button.light:hover,
+.button.color,
+input[type="button"],
+input[type="submit"],
+input[type="button"]:focus,
+input[type="submit"]:focus { background:#fa5b0f; }
+.tabs-nav li.active a { border-top: 1px solid #fa5b0f; }
+.ui-accordion .ui-accordion-header-active:hover,
+.ui-accordion .ui-accordion-header-active { color: #fa5b0f; }
+.ui-accordion-icon-active { background-color: #fa5b0f; }
+.trigger.active a { color: #fa5b0f; }
+.trigger.active .toggle-icon { background-color: #fa5b0f; }
+.testimonials-author { color: #fa5b0f; }
+.pagination .current { background: #fa5b0f !important; }
+.flickr-widget a:hover { border-color: #fa5b0f; }
+.latest-shop-items img:hover { background: #fa5b0f; border: 1px solid #fa5b0f; }
+.increase-value { background: #fa5b0f; }
+.ui-widget-header { background: #fa5b0f; }

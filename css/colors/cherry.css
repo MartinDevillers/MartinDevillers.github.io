@@ -1,0 +1,45 @@
+/* =================================================================== */
+/* Cherry #911938
+====================================================================== */
+
+#top-line { background: #911938; }
+#current { background-color: #911938; border-right: 1px solid #911938; }
+.ls-fullwidth .ls-nav-next:hover,
+.ls-fullwidth .ls-nav-prev:hover { background-color: #911938; }
+.caption-color { background: #911938; }
+.flexslider .flex-next:hover,
+.flexslider .flex-prev:hover { background-color: #911938; }
+.arl.active:hover,
+.arr.active:hover { background-color: #911938; }
+.portfolio-item:hover > figure > .item-description { border-top: 5px solid #911938; }
+.highlight.color,
+.skill-bar-content { background: #911938; }
+.dropcap,
+.tabs-nav li.active a,
+#breadcrumbs ul li a { color: #911938; }
+.search-btn-widget { background-color: #911938; }
+.tags a:hover { background: #911938; }
+.latest-post-blog img:hover { background: #911938; border: 1px solid #911938; }
+.flickr-widget-blog a:hover { border: 5px solid #911938; }
+.selected { color: #911938 !important; }
+.filters-dropdown.active,
+#portfolio-navi a:hover { background-color: #911938; }
+.button.gray:hover,
+.button.light:hover,
+.button.color,
+input[type="button"],
+input[type="submit"],
+input[type="button"]:focus,
+input[type="submit"]:focus { background:#911938; }
+.tabs-nav li.active a { border-top: 1px solid #911938; }
+.ui-accordion .ui-accordion-header-active:hover,
+.ui-accordion .ui-accordion-header-active { color: #911938; }
+.ui-accordion-icon-active { background-color: #911938; }
+.trigger.active a { color: #911938; }
+.trigger.active .toggle-icon { background-color: #911938; }
+.testimonials-author { color: #911938; }
+.pagination .current { background: #911938 !important; }
+.flickr-widget a:hover { border-color: #911938; }
+.latest-shop-items img:hover { background: #911938; border: 1px solid #911938; }
+.increase-value { background: #911938; }
+.ui-widget-header { background: #911938; }
