@@ -67,20 +67,20 @@
 /* Logo / Tagline
 ====================================*/
 #logo {
-	margin-top: 50px;
+	margin-top: 46px;
 }
 
 #logo a img {
 	float: left;
-	width: 104px;
-	height: 26px;
+	width: 200px;
+	height: 45px;
 }
 
 #tagline {
 	color: #888;
 	border-left: 1px solid #e8e8e8;
 	margin: 0 0 0 20px;
-	padding: 5px 0 5px 20px;
+	padding: 15px 0 15px 20px;
 	float: left;
 	font-size: 12px;
 }
@@ -3662,7 +3662,7 @@ span.time {
 
 #sub-menu ul li:first-child  { border: none; padding-left: 0; }
 #sub-menu ul li:last-child  { padding-right: 0; }
-#logo-footer { margin: 10px 0 20px 0; width: 100px; height: 24px; }
+#logo-footer { margin: 10px 0 20px -10px; width: 160px; height: 36px; }
 
 
 /* Photo Stream
