@@ -133,10 +133,12 @@
 .digg {background: url(../images/social/digg.png) no-repeat 50%; }
 .flickr {background: url(../images/social/flickr.png) no-repeat 50%; }
 .forrst {background: url(../images/social/forrst.png) no-repeat 50%; }
+.github {background: url(../images/social/github.png) no-repeat 50%; }
 .lastfm {background: url(../images/social/lastfm.png) no-repeat 50%; }
 .picasa {background: url(../images/social/picasa.png) no-repeat 50%; }
 .pinterest {background: url(../images/social/pinterest.png) no-repeat 50%; }
 .skype {background: url(../images/social/skype.png) no-repeat 50%; }
+.stackoverflow {background: url(../images/social/stackoverflow.png) no-repeat 50%; }
 .tumblr {background: url(../images/social/tumblr.png) no-repeat 50%; }
 .vimeo {background: url(../images/social/vimeo.png) no-repeat 50%; }
 .wordpress {background: url(../images/social/wordpress.png) no-repeat 50%; }
@@ -4578,10 +4580,12 @@ table.standard-table.shop td {
 	.digg {background: url(../images/social/digg@2x.png) no-repeat 50%; background-size: 50%; }
 	.flickr {background: url(../images/social/flickr@2x.png) no-repeat 50%; background-size: 50%; }
 	.forrst {background: url(../images/social/forrst@2x.png) no-repeat 50%; background-size: 50%; }
+	.github {background: url(../images/social/github@2x.png) no-repeat 50%; background-size: 50%; }
 	.lastfm {background: url(../images/social/lastfm@2x.png) no-repeat 50%; background-size: 50%; }
 	.picasa {background: url(../images/social/picasa@2x.png) no-repeat 50%; background-size: 50%; }
 	.pinterest {background: url(../images/social/pinterest@2x.png) no-repeat 50%; background-size: 50%; }
 	.skype {background: url(../images/social/skype@2x.png) no-repeat 50%; background-size: 50%; }
+	.stackoverflow {background: url(../images/social/stackoverflow@2x.png) no-repeat 50%; background-size: 50%; }
 	.tumblr {background: url(../images/social/tumblr@2x.png) no-repeat 50%; background-size: 50%; }
 	.vimeo {background: url(../images/social/vimeo@2x.png) no-repeat 50%; background-size: 50%; }
 	.wordpress {background: url(../images/social/wordpress@2x.png) no-repeat 50%; background-size: 50%; }
