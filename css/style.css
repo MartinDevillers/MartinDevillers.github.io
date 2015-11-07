@@ -3295,6 +3295,21 @@ table.standard-table tr:hover td {background-color: #fafafa;}
 
 .post-content {
 	margin: 0 0 0 63px;
+	color: #515151;
+	/*max-width: 595px;*/
+}
+
+.post-content ul {
+	list-style-type:disc;
+	margin: 0 0 15px 30px;
+}
+
+.post-content ol {
+	margin: 0 0 15px 30px;
+}
+
+.post-content ul  li, .post-content ol  li{
+	line-height: 21px;
 }
 
 .post-img a img {
@@ -4537,7 +4552,14 @@ table.standard-table.shop td {
 		width: 260px;
 		height: auto;
 	}
-
+	
+	.post-content {
+		margin: inherit;	
+	}
+	
+	.date  {
+		display: none;
+	}
 }
 
 /* Retina Images (High Resolution)
