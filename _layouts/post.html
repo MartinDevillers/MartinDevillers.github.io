@@ -1,0 +1,102 @@
+---
+layout: default
+---
+<!-- 960 Container -->
+<div class="container floated">
+
+	<div class="sixteen floated page-title">
+
+		<h2>Blog <span>(artikel)</span></h2>
+
+		<nav id="breadcrumbs">
+			<ul>
+				<li>U bent hier:</li>
+				<li><a href="/">Start</a></li>
+				<li>Blog</li>
+			</ul>
+		</nav>
+
+	</div>
+
+</div>
+<!-- 960 Container / End -->
+
+
+<!-- 960 Container -->
+<div class="container floated">
+
+	<!-- Page Content -->
+	<div class="eleven floated">
+
+		<!-- Post -->
+		<article class="post">
+
+			{% if page.image %}
+			<figure class="post-img picture">
+				<a href="images/blog-01-large.jpg" rel="fancybox" title="First Light on the Lake"><img src="images/blog-01.jpg" alt="" /></a>
+			</figure>
+			{% endif %}
+
+			<section class="date">
+				<span class="day">{{ page.date | date: "%-d" }}</span>
+				<span class="month">{{ page.date | date: "%b" }}</span>
+			</section>
+
+			<section class="post-content">
+
+				<header class="meta">
+					<h2><a href="blog-post.html">{{ page.title }}</a></h2>
+					<span><i class="halflings user"></i>Door <a href="/">Martin Devillers</a></span>
+					<span><i class="halflings calendar"></i>Op {{ page.date | date_to_long_string }}</span>
+					<!--<span><i class="halflings tag"></i><a href="#">Boating</a>, <a href="#">Recreation</a></span>-->
+					<span><i class="halflings comments"></i>Met <a href="#disqus_thread">Reacties</a></span>
+				</header>
+
+				{{ content }}
+
+			</section>
+
+		</article>
+
+		<!-- About Author -->
+		<section class="about-author">
+			<img src="/images/about.jpg" alt="" />
+			<div class="about-description">
+				<h4>Martin Devillers</h4>
+				<p>I am a freelance software architect that enjoys helping organizations with the design and implementation of simple yet powerful IT-solutions. With eight years of experience in IT, in-depth knowledge of web, mobile and cloud-technologies and a university cum laude graduate in IT, I possess the right balance between knowledge and experience to optimally assist your organization. </p>
+			</div>
+		</section>
+
+
+		<!-- Divider -->
+		<div class="line"></div>
+
+
+		{% include comments.html %}
+				
+	</div>
+	<!-- Content / End -->
+	
+	<!-- Sidebar -->
+	<div class="four floated sidebar right">
+		<aside class="sidebar">
+
+			<!-- Categories -->
+			<nav class="widget">
+				<h4>Andere artikelen</h4>
+				<ul class="categories">
+					{% for post in site.related_posts limit:5 %}
+					<li>
+						<a href="{{ post.url }}">
+							{{ post.title }}
+						</a>
+					</li>
+					{% endfor %}
+				</ul>
+			</nav>
+
+		</aside>
+	</div>
+
+</div>
+<!-- 960 Container / End -->

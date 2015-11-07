@@ -1,0 +1,82 @@
+<!-- Footer
+================================================== -->
+
+<!-- Footer / Start -->
+<footer id="footer">
+	<!-- 960 Container -->
+	<div class="container">
+
+		<!-- About -->
+		<div class="four columns">
+			<img id="logo-footer" src="/images/devillers-footer.png" alt="" />
+			<p>Freelance Software Architect</p>
+
+		</div>
+
+		<!-- Contact Details -->
+		<div class="four columns">
+			<h4>Contactgegevens</h4>
+			<ul class="contact-details-alt">
+				<li><i class="halflings white map-marker"></i> <p><strong>Adres:</strong> Gastenberg 67, 5244 JR Rosmalen</p></li>
+				<li><i class="halflings white user"></i> <p><strong>Telefoon:</strong> +31 (0)6 25 10 09 96</p></li>
+				<li><i class="halflings white envelope"></i> <p><strong>Email:</strong> <a href="mailto:martin@devillers.nl">martin@devillers.nl</a></p></li>
+			</ul>
+		</div>
+
+		<!-- Photo Stream -->
+		<div class="four columns">
+			<h4>Photo Stream</h4>
+			<div class="flickr-widget">
+				<script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=6&amp;display=latest&amp;size=s&amp;layout=x&amp;source=user&amp;user=136421181@N08"></script>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
+		<!-- Twitter -->
+		<div class="four columns">
+			<h4>Twitter</h4>
+			<ul id="twitter"></ul>
+				<script type="text/javascript">
+					jQuery(document).ready(function($){
+					$.getJSON('twitter.php?url='+encodeURIComponent('statuses/user_timeline.json?screen_name=Vasterad&count=1'), function(tweets){
+						$("#twitter").html(tz_format_twitter(tweets));
+					}); });
+				</script>
+			<div class="clearfix"></div>
+		</div>
+
+	</div>
+	<!-- 960 Container / End -->
+
+</footer>
+<!-- Footer / End -->
+
+
+<!-- Footer Bottom / Start  -->
+<footer id="footer-bottom">
+
+	<!-- 960 Container -->
+	<div class="container">
+
+		<!-- Copyrights -->
+		<div class="eight columns">
+			<div class="copyright">
+				© 2014-2015 <a href="/">Devillers</a>, Rosmalen. Alle rechten voorbehouden. 
+			</div>
+		</div>
+
+		<!-- Menu -->
+		<div class="eight columns">
+			<nav id="sub-menu">
+				<ul>
+					<li><a href="/sitemap.xml">Sitemap</a></li>
+					<li><a href="/contact">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+
+	</div>
+	<!-- 960 Container / End -->
+
+</footer>
+<!-- Footer Bottom / End -->

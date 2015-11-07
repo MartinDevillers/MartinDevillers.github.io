@@ -1,0 +1,100 @@
+<!-- Header
+================================================== -->
+<div id="top-line"></div>
+
+<!-- 960 Container -->
+<div class="container">
+
+	<!-- Header -->
+	<header id="header">
+
+		<!-- Logo -->
+		<div class="ten columns">
+			<div id="logo">
+				<h1><a href="/"><img src="/images/devillers.png" alt="Devillers" /></a></h1>
+				<div id="tagline">Freelance Software Architect</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
+		<!-- Social / Contact -->
+		<div class="six columns">
+
+			<!-- Social Icons -->
+			<ul class="social-icons">
+				<li class="twitter"><a href="https://twitter.com/MartinDevillers">Twitter</a></li>
+				<li class="facebook"><a href="https://www.facebook.com/mma.devillers">Facebook</a></li>
+				<li class="stackoverflow"><a href="http://stackoverflow.com/users/546967/martin-devillers">Stack Overflow</a></li>
+				<li class="github"><a href="https://github.com/MartinDevillers">GitHub</a></li>
+				<li class="linkedin"><a href="https://www.linkedin.com/in/mdevillers">LinkedIn</a></li>
+				<li class="rss"><a href="/atom.xml">RSS</a></li>
+			</ul>
+
+			<div class="clearfix"></div>
+
+			<!-- Contact Details -->
+			<div class="contact-details">Telefoon: +31 (0)6 25 10 09 96</div>
+
+			<div class="clearfix"></div>
+
+			<!-- Search -->
+			<nav class="top-search">
+				<form action="https://google.com/search" method="get">
+					<input type="hidden" name="sitesearch" value="devillers.nl" />
+					<input class="search-field" type="text" name="q" onblur="if(this.value=='')this.value='Zoeken';" onfocus="if(this.value=='Zoeken')this.value='';" value="Zoeken" />
+				</form>
+			</nav>
+
+		</div>
+	</header>
+	<!-- Header / End -->
+
+	<div class="clearfix"></div>
+
+</div>
+<!-- 960 Container / End -->
+
+
+<!-- Navigation
+================================================== -->
+<nav id="navigation" class="style-1">
+
+<div class="left-corner"></div>
+<div class="right-corner"></div>
+
+{% assign current = page.url | downcase | split: '/' %}
+
+<ul class="menu" id="responsive">
+
+	<li><a href="/" {% if current[1] == null %}id="current"{% endif %}><i class="halflings white home"></i> Home</a></li>
+
+	<li><a href="/dienstverlening" {% if current[1] == 'dienstverlening' %}id="current"{% endif %}><i class="halflings white cog"></i> Dienstverlening</a>
+		<!-- Second Level / Start -->
+		<ul>
+			<li><a href="/dienstverlening/solution-architectuur">Solution Architectuur</a></li>
+			<li><a href="/dienstverlening/applicatie-ontwerp">Applicatie Ontwerp</a></li>
+			<li><a href="/dienstverlening/software-ontwikkeling">Software Ontwikkeling</a></li>
+			<li><a href="/dienstverlening/technische-coach">Technische Coach</a></li>
+			<li><a href="/dienstverlening/rapid-prototyping">Rapid Prototyping</a></li>
+			<li><a href="/dienstverlening/artikelen-schrijven">Artikelen schrijven</a></li>
+		</ul>
+		<!-- Second Level / End -->
+	</li>
+
+	<li><a href="/projecten" {% if current[1] == 'projecten' %}id="current"{% endif %}><i class="halflings white briefcase"></i> Projecten</a>
+		<!-- Second Level / Start -->
+		<ul>
+			<li><a href="/projecten/ov-chipkaart">OV-chipkaart</a></li>
+			<li><a href="/projecten/screenconsult">ScreenConsult</a></li>
+			<li><a href="/projecten/kanzi">Kanzi</a></li>
+		</ul>
+		<!-- Second Level / End -->
+	</li>
+	
+	<li><a href="/blog" {% if current[1] == 'blog' %}id="current"{% endif %}><i class="halflings white pencil"></i> Blog</a></li>
+
+	<li><a href="/contact" {% if current[1] == 'contact' %}id="current"{% endif %}><i class="halflings white envelope"></i> Contact</a></li>
+
+</ul>
+</nav>
+<div class="clearfix"></div>
