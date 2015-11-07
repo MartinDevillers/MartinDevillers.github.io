@@ -1,0 +1,91 @@
+---
+layout: default
+title: Blog
+---
+<!-- 960 Container -->
+<div class="container floated">
+
+	<div class="sixteen floated page-title">
+
+		<h2>Blog <span>(pagina {{ paginator.page }} van {{ paginator.total_pages }})</span></h2>
+
+		<nav id="breadcrumbs">
+			<ul>
+				<li>U bent hier:</li>
+				<li><a href="index.html">Start</a></li>
+				<li>Blog</li>
+			</ul>
+		</nav>
+
+	</div>
+
+</div>
+<!-- 960 Container / End -->
+
+<!-- 960 Container -->
+<div class="container floated">
+
+	<!-- Page Content -->
+	<div class="eleven floated">
+
+		{% for post in paginator.posts %}
+		
+		<!-- Post -->
+		<article class="post">
+
+			<section class="date">
+				<span class="day">{{ post.date | date: "%-d" }}</span>
+				<span class="month">{{ post.date | date: "%b" }}</span>
+			</section>
+
+			<section class="post-content">
+
+				<header class="meta">
+					<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+					<span><i class="halflings user"></i>Door <a href="/about">Martin Devillers</a></span>
+					<span><i class="halflings calendar"></i>Op {{ post.date | date_to_long_string }}</span>
+					<!--<span><i class="halflings comments"></i>With <a href="#">12 Comments</a></span>-->
+				</header>
+
+				<p>{{ post.excerpt | strip_html }}</p>
+
+				<a href="{{ post.url }}" class="button color">Lees meer</a>
+
+			</section>
+
+		</article>
+
+		<!-- Divider -->
+		<div class="line"></div>
+		
+		{% endfor %}
+		
+		<!-- Pagination -->
+		<nav class="pagination">
+			<ul>
+				{% if paginator.previous_page %}
+					<li><a href="{{ paginator.previous_page_path }}">Vorige</a></li>
+				{% endif %}
+					
+				{% for page in (1..paginator.total_pages) %}
+					{% if page == paginator.page %}
+						<li><a href="#" class="current">{{ page }}</a></li>
+					{% elsif page == 1 %}
+						<li><a href="/blog">{{ page }}</a></li>
+					{% else %}
+						<li><a href="{{ site.paginate_path }}">{{ page }}</a></li>
+					{% endif %}
+				{% endfor %}
+					
+				{% if paginator.next_page %}
+					<li><a href="{{ paginator.next_page_path }}">Volgende</a></li>
+				{% endif %}	
+			</ul>
+			<div class="clearfix"></div>
+		</nav>
+
+	</div>
+	<!-- Columns / End -->
+
+</div>
+<!-- 960 Container / End -->
