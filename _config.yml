@@ -8,6 +8,10 @@ pygments:         true
 # Permalinks
 permalink:        pretty
 
+# Setup
+title:            'Devillers - Freelance Software Architect'
+url:              http://www.devillers.nl
+
 paginate:         5
 paginate_path: 	  "/blog/page:num/"
 
