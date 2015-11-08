@@ -2,7 +2,7 @@
 layout: post
 title: Back from Microsoft TechEd 2014
 comments: true
-permalink: blog/back-from-microsoft-teched-2014
+permalink: blog/back-from-microsoft-teched-2014/
 redirect_from: /back-from-microsoft-teched-2014/
 ---
 

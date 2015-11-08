@@ -42,7 +42,7 @@ title: Blog
 
 				<header class="meta">
 					<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-					<span><i class="halflings user"></i>Door <a href="/about">Martin Devillers</a></span>
+					<span><i class="halflings user"></i>Door <a href="/contact/">Martin Devillers</a></span>
 					<span><i class="halflings calendar"></i>Op {{ post.date | date_to_long_string }}</span>
 					<!--<span><i class="halflings comments"></i>With <a href="#">12 Comments</a></span>-->
 				</header>
@@ -71,7 +71,7 @@ title: Blog
 					{% if index == paginator.page %}
 						<li><a href="{{ page.url }}" class="current">{{ index }}</a></li>
 					{% elsif index == 1 %}
-						<li><a href="/blog">{{ index }}</a></li>
+						<li><a href="/blog/">{{ index }}</a></li>
 					{% else %}
 						<li><a href="{{ site.paginate_path | replace: ':num', index }}">{{ index }}</a></li>
 					{% endif %}

@@ -2,7 +2,7 @@
 layout: post
 title: Localizing Microsoft ReportViewer
 comments: true
-permalink: blog/localizing-microsoft-reportviewer
+permalink: blog/localizing-microsoft-reportviewer/
 redirect_from: /localizing-microsoft-reportviewer/
 ---
 

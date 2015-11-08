@@ -2,7 +2,7 @@
 layout: post
 title: Quick debugging KnockoutJS in Chrome with ko.dataFor($0) and ko.contextFor($0)
 comments: true
-permalink: blog/quick-debugging-knockoutjs-in-chrome
+permalink: blog/quick-debugging-knockoutjs-in-chrome/
 redirect_from: /quick-debugging-knockoutjs-in-chrome/
 ---
 

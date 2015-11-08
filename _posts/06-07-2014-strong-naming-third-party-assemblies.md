@@ -2,7 +2,7 @@
 layout: post
 title: Strong Naming Third-party Assemblies
 comments: true
-permalink: blog/strong-naming-third-party-assemblies
+permalink: blog/strong-naming-third-party-assemblies/
 redirect_from: /strong-naming-third-party-assemblies/
 ---
 

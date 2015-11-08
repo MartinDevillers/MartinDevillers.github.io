@@ -2,7 +2,7 @@
 layout: post
 title: 'ASP.NET MVC 4 RC: Getting WebApi and Areas to play nicely'
 comments: true
-permalink: blog/getting-webapi-and-areas-to-play-nicely
+permalink: blog/getting-webapi-and-areas-to-play-nicely/
 redirect_from: /getting-webapi-and-areas-to-play-nicely/
 ---
 

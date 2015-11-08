@@ -2,7 +2,7 @@
 layout: post
 title: Good gravy, I won an award!
 comments: true
-permalink: blog/good-gravy-i-won-an-award
+permalink: blog/good-gravy-i-won-an-award/
 redirect_from: /good-gravy-i-won-an-award/
 ---
 

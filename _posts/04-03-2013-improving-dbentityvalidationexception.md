@@ -2,7 +2,7 @@
 layout: post
 title: Easy way to improve DbEntityValidationException of Entity Framework
 comments: true
-permalink: blog/improving-dbentityvalidationexception
+permalink: blog/improving-dbentityvalidationexception/
 redirect_from: /improving-dbentityvalidationexception/
 ---
 
