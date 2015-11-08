@@ -6,7 +6,7 @@ permalink: blog/back-from-microsoft-teched-2014
 redirect_from: /back-from-microsoft-teched-2014/
 ---
 
-<img style="float: right" src="/assets/03-11-2014-teched6.png">
+<img style="float: right" src="/assets/03-11-2014-teched6.png" alt="Microsoft TechEd Europe 2014">
 I just returned from a week of absorbing hardcore IT knowledge, meeting industry leaders and enjoying the nice Spanish weather. Where? Microsoft TechEd 2014 of course!
 
 Personal highlights:
