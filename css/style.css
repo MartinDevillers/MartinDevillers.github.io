@@ -131,6 +131,7 @@
 .blogger {background: url(../images/social/blogger.png) no-repeat 50%; }
 .deviantart {background: url(../images/social/deviantart.png) no-repeat 50%; }
 .digg {background: url(../images/social/digg.png) no-repeat 50%; }
+.gplus {background: url(../images/social/gplus.png) no-repeat 50%; }
 .flickr {background: url(../images/social/flickr.png) no-repeat 50%; }
 .forrst {background: url(../images/social/forrst.png) no-repeat 50%; }
 .github {background: url(../images/social/github.png) no-repeat 50%; }
@@ -4603,6 +4604,7 @@ table.standard-table.shop td {
 	.flickr {background: url(../images/social/flickr@2x.png) no-repeat 50%; background-size: 50%; }
 	.forrst {background: url(../images/social/forrst@2x.png) no-repeat 50%; background-size: 50%; }
 	.github {background: url(../images/social/github@2x.png) no-repeat 50%; background-size: 50%; }
+	.gplus {background: url(../images/social/gplus@2x.png) no-repeat 50%; background-size: 50%; }
 	.lastfm {background: url(../images/social/lastfm@2x.png) no-repeat 50%; background-size: 50%; }
 	.picasa {background: url(../images/social/picasa@2x.png) no-repeat 50%; background-size: 50%; }
 	.pinterest {background: url(../images/social/pinterest@2x.png) no-repeat 50%; background-size: 50%; }
