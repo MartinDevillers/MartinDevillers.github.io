@@ -3720,14 +3720,22 @@ span.time {
 
 #twitter a {color: #fff;}
 
-#twitter b a,
-#twitter b a:hover {
+#twitter .timePosted {
+	margin: 0;
+}
+
+#twitter .timePosted a,
+#twitter .timePosted a:hover {
 	margin-top: 5px;
 	display: block;
 	color: #999;
 	font-weight: normal;
 }
 
+#twitter .tweet {
+	line-height: 18px;
+	margin: 0;
+}
 
 /* Contact Details
 ====================================*/

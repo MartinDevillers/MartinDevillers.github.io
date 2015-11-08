@@ -350,7 +350,8 @@ $(window).resize(function () {
 /*----------------------------------------------------*/
 
 	$('#layerslider').layerSlider({
-		skin : 'fullwidth',
+		skinsPath : '/css/',
+		skin: 'layerslider',
 		hoverPrevNext 			: true,
 		navStartStop 			: false,
 		navButtons				: false,

@@ -37,10 +37,18 @@
 			<h4>Twitter</h4>
 			<ul id="twitter"></ul>
 				<script type="text/javascript">
-					jQuery(document).ready(function($){
-					$.getJSON('twitter.php?url='+encodeURIComponent('statuses/user_timeline.json?screen_name=Vasterad&count=1'), function(tweets){
-						$("#twitter").html(tz_format_twitter(tweets));
-					}); });
+				var twitter = {
+					"id": '663368765430738944',
+					"domId": 'twitter',
+					"maxTweets": 1,
+					"enableLinks": true,
+					"showUser": false,
+					"showTime": true,
+					"dateFunction": relative_time,
+					"showRetweet": false,
+					"showInteraction": false				  
+				};
+				twitterFetcher.fetch(twitter);
 				</script>
 			<div class="clearfix"></div>
 		</div>
