@@ -8,4 +8,4 @@ before_install:
   - gem install html-proofer
 script:
     - bundle exec jekyll build
-    - htmlproof ./_site
+    - htmlproof ./_site --disable-external
