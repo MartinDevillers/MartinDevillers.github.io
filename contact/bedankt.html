@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Contact
-redirect_from: /about/
 ---
 <!-- 960 Container -->
 <div class="container floated">
@@ -87,6 +86,10 @@ redirect_from: /about/
 	<!-- Page Content -->
 	<div class="eleven floated right">
 		<section class="page-content">
+		
+			<div class="notification success closeable">
+				<p><span>Bedankt!</span> Uw bericht is succesvol verstuurd. Ik zal zo spoedig mogelijk contact met u opnemen.</p>
+			</div>
 
 			<h3 class="margin-reset">Over Martin Devillers</h3>
 			<p>Ik ben een freelance software architect die organisaties graag helpt met het ontwerpen en ontwikkelen van krachtige doch eenvoudige IT-oplossingen. Met acht jaar werkervaring in de IT, diepgaande technische kennis van web, mobile en cloud en een Cum Laude universitaire IT-opleiding beschik ik over de juiste balans tussen kennis, ervaring en theorie om uw organisatie optimaal van dienst te zijn.</p>
@@ -148,6 +151,8 @@ redirect_from: /about/
 								<label for="body" accesskey="C">Bericht: <span>*</span></label>
 								<textarea name="body" cols="40" rows="3" id="body" spellcheck="true"></textarea>
 							</div>
+							
+							<input type="hidden" name="_next" value="//devillers.nl/contact/bedankt"/>
 
 						</fieldset>
 

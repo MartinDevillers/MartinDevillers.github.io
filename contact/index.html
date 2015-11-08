@@ -1,0 +1,171 @@
+---
+layout: default
+title: Contact
+redirect_from: /about/
+---
+<!-- 960 Container -->
+<div class="container floated">
+
+	<div class="sixteen floated page-title">
+
+		<h2>Contact</h2>
+
+		<nav id="breadcrumbs">
+			<ul>
+				<li>U bent hier:</li>
+				<li><a href="/">Start</a></li>
+				<li>Contact</li>
+			</ul>
+		</nav>
+
+	</div>
+
+</div>
+<!-- 960 Container / End -->
+
+
+<!-- 960 Container -->
+<div class="container floated">
+
+	<!-- Sidebar -->
+	<div class="four floated sidebar left">
+		<aside class="sidebar padding-reset">
+
+			<!--
+			<div class="widget">
+				<h4>Informatie</h4>
+				<p>Phasellus ultricies id suscipit mauris monte lobortis. Cum sociis natoque penatibus magnis parturient.</p>
+			</div>
+			-->
+
+			<div class="widget">
+				<h4>Adres- en contactgegevens</h4>
+
+				<ul class="contact-informations">
+					<li><span class="address">Gastenberg 67</span></li>
+					<li><span class="address">5244 JR Rosmalen</span></li>
+					<li><span class="address">The Netherlands</span></li>
+				</ul>
+
+				<ul class="contact-informations second">
+					<li><i class="halflings headphones"></i> <p>+31 (0)6 25 10 09 96</p></li>
+					<li><i class="halflings envelope"></i> <p>martin@devillers.nl</p></li>
+					<li><i class="halflings globe"></i> <p>www.devillers.nl</p></li>
+				</ul>
+				
+				<ul class="contact-informations second">
+					<li><i class="halflings linkedin"></i> <p><a href="https://www.linkedin.com/in/mdevillers">/in/mdevillers</a></p></li>
+					<li><i class="halflings twitter"></i> <p><a href="https://twitter.com/MartinDevillers">@MartinDevillers</a></p></li>
+					<li><i class="halflings facebook"></i> <p><a href="https://www.facebook.com/mma.devillers">mma.devillers</a></p></li>
+				</ul>
+
+			</div>
+			
+			<div class="widget">
+				<h4>Open Source</h4>
+				<p>Voor de techneuten, bekijk mijn bijdragen aan de community:</p>
+				<h5><a href="http://stackoverflow.com/users/546967/martin-devillers">StackOverflow</a></h5>
+				<a href="http://stackoverflow.com/users/546967/martin-devillers">
+					<img src="http://stackoverflow.com/users/flair/546967.png" width="208" height="58" alt="profile for Martin Devillers at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Martin Devillers at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
+				</a>
+				<h5><a href="https://github.com/MartinDevillers">GitHub</a></h5>
+				<iframe src="http://githubbadge.appspot.com/MartinDevillers?a=0" style="border: 0;height: 108px;width: 200px;overflow: hidden;"></iframe>
+			</div>
+
+			<div class="widget">
+				<h4>Werktijden</h4>
+				<ul class="contact-informations hours">
+					<li><i class="halflings time"></i>Maandag - Vrijdag <span class="hours">7 am tot 7 pm</span></li>
+					<li><i class="halflings ban-circle"></i>Zaterdag - Zondag <span class="hours">Gesloten</span></li>
+				</ul>
+			</div>
+
+		</aside>
+	</div>
+	<!-- Sidebar / End -->
+
+	<!-- Page Content -->
+	<div class="eleven floated right">
+		<section class="page-content">
+
+			<h3 class="margin-reset">Over Martin Devillers</h3>
+			<p>Ik ben een freelance software architect die organisaties graag helpt met het ontwerpen en ontwikkelen van krachtige doch eenvoudige IT-oplossingen. Met acht jaar werkervaring in de IT, diepgaande technische kennis van web, mobile en cloud en een Cum Laude universitaire IT-opleiding beschik ik over de juiste balans tussen kennis, ervaring en theorie om uw organisatie optimaal van dienst te zijn.</p>
+		
+			<h3>Locatie</h3>
+			<p>Ik woon in Rosmalen en ben inzetbaar door heel Nederland.</p>
+
+			<!-- Google Maps -->
+			<section class="google-map-container">
+
+				<div id="googlemaps" class="google-map google-map-full" style="padding-bottom:40%"></div>
+
+				<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+				<script src="/scripts/jquery.gmap.min.js"></script>
+
+				<script type="text/javascript">
+				jQuery('#googlemaps').gMap({
+					maptype: 'ROADMAP',
+					scrollwheel: false,
+					zoom: 10,
+					markers: [
+						{
+							address: 'Gastenberg 67, 5244JR Rosmalen, The Netherlands', // Your Adress Here
+							html: '',
+							popup: false,
+						}
+					],
+				});
+				</script>
+			</section>
+			<!-- Google Maps / End -->
+
+
+			<h3 class="margin">Contactformulier</h3>
+			<p class="margin">Gebruik het onderstaande formulier om mij een bericht te sturen. Ik zal zo spoedig mogelijk contact met u opnemen.</p>
+
+				<!-- Contact Form -->
+				<section id="contact">
+
+					<!-- Success Message -->
+					<mark id="message"></mark>
+
+					<!-- Form -->
+					<form method="post" action="//formspree.io/martin@devillers.nl" name="contactform" id="contactform">
+
+						<fieldset>
+
+							<div>
+								<label for="name" accesskey="U">Naam:</label>
+								<input name="name" type="text" id="name" />
+							</div>
+
+							<div>
+								<label for="email" accesskey="E">Email: <span>*</span></label>
+								<input name="email" type="email" id="email" pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" />
+							</div>
+
+							<div>
+								<label for="body" accesskey="C">Bericht: <span>*</span></label>
+								<textarea name="body" cols="40" rows="3" id="body" spellcheck="true"></textarea>
+							</div>
+							
+							<input type="hidden" name="_next" value="//devillers.nl/contact/bedankt"/>
+
+						</fieldset>
+
+						<input type="submit" class="submit" id="submit" value="Verstuur Bericht" />
+						<div class="clearfix"></div>
+
+					</form>
+
+				</section>
+				<!-- Contact Form / End -->
+
+
+		</section>
+	</div>
+	<!-- Page Content / End -->
+
+
+</div>
+<!-- 960 Container / End -->

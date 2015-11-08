@@ -25,7 +25,7 @@ jQuery(document).ready(function(){
 	});
 
 	// Validate as you type
-	$('#comments').focusout(function() {
+	$('#body').focusout(function() {
 		if (!$(this).val())
 			$(this).addClass('error').parent().find('mark').removeClass('valid').addClass('error');
 		else
@@ -45,13 +45,13 @@ jQuery(document).ready(function(){
 
 			// Kick in Validation
 			$('#email').triggerHandler("focusout");
-			$('#comments').triggerHandler("focusout");
+			$('#body').triggerHandler("focusout");
 
 		});
 	});
 
 	$('#contactform').submit(function(){
-
+	
 		if ($('#contact mark.error').size()>0) {
 			if(shake == "Yes") {
 			$('#contact').effect('shake', { times:2 }, 75);
@@ -59,23 +59,11 @@ jQuery(document).ready(function(){
 			return false;
 		}
 
-		var action = $(this).attr('action');
-
  		$('#submit')
-			.after('<img src="images/ajax-loader.gif" class="loader" />')
+			.after('<img src="/images/ajax-loader.gif" class="loader" />')
 			.attr('disabled','disabled');
-
-		$.post(action, $('#contactform').serialize(),
-			function(data){
-				$('#message').html( data );
-				$('#message').slideDown();
-				$('#contactform img.loader').fadeOut('slow',function(){$(this).remove()});
-				$('#contactform #submit').removeAttr('disabled');
-				if(data.match('success') != null) $('#contactform #submit').attr("disabled", true);
-			}
-		);
-
-		return false;
+			
+		return true;
 
 	});
 
