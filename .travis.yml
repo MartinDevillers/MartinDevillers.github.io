@@ -8,4 +8,4 @@ before_install:
   - gem install html-proofer
 script:
     - bundle exec jekyll build
-    - bundle exec htmlproof ./_site
+    - htmlproof ./_site
