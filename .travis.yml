@@ -6,4 +6,4 @@ env:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # Speeds up installation of html-proofer
 script:
     - bundle exec jekyll build
-	- bundle exec htmlproof ./_site
+    - bundle exec htmlproof ./_site
