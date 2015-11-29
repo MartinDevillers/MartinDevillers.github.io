@@ -4175,6 +4175,9 @@ table.standard-table.shop td {
 /* Media Queries
 ====================================================================== */
 
+.hide-desktop {
+	display: none;
+}
 
 /* Higher than standard 960 (desktop devices)
 ====================================================================== */
@@ -4436,6 +4439,10 @@ table.standard-table.shop td {
 
 	.pricing-table.featured {
 		margin-top: 12px;
+	}
+	
+	.hide-desktop {
+		display: block;
 	}
 }
 
