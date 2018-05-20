@@ -1,4 +1,4 @@
-.highlight {
+div.highlight {
 	padding: 3px 6px;
 	font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 	background: #fcfcfc;
@@ -10,7 +10,7 @@
 	/*color: #3f8faf;*/
 }
 
-.highlight pre { 
+pre.highlight { 
 	display: block;
 	margin-top: 0;
 	margin-bottom: 0;

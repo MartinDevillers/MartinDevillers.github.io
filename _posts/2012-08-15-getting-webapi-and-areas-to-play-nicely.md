@@ -126,9 +126,9 @@ To use the new extension method, remove the Routes property from the call chain:
 
 ```c#
 context.MapHttpRoute(
-	name: "Administration_DefaultApi",
-	routeTemplate: "Administration/api/{controller}/{id}",
-	defaults: new { id = RouteParameter.Optional }
+    name: "Administration_DefaultApi",
+    routeTemplate: "Administration/api/{controller}/{id}",
+    defaults: new { id = RouteParameter.Optional }
 );
 ```
 

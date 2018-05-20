@@ -13,4 +13,4 @@ De [Nederlandse Java User Group](http://www.nljug.org/) (NLJUG) heeft in haar 20
 * **Isoleren van applicaties** betekent hogere veiligheid, betere schaalbaarheid en minder impact van crashes.
 * **Infrastructuur consolidatie**, dankzij de lage systeemvereisten van Docker kan je met minder hardware hetzelfde bereiken als wanneer je traditionele Virtual Machines zou gebruiken.
 
-###[<i class="icon-file-pdf-o"></i> Klik hier om het artikel te lezen (PDF)](/assets/28-11-2015-artikel-translink-java-magazine-5-2015.pdf)
+### [<i class="icon-file-pdf-o"></i> Klik hier om het artikel te lezen (PDF)](/assets/28-11-2015-artikel-translink-java-magazine-5-2015.pdf)

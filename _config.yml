@@ -1,9 +1,10 @@
 # Dependencies
-markdown:         redcarpet
-redcarpet:
-  extensions: ["tables"]
-
-pygments:         true
+markdown:         kramdown
+highlighter:      rouge
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
 
 # Permalinks
 permalink:        pretty
@@ -21,8 +22,9 @@ version:          1.0.0
 github:
   repo:           github.com/MartinDevillers/MartinDevillers.github.io
 
-gems:
+plugins:
   - jekyll-redirect-from
+  - jekyll-paginate
 
-# Travis bundles all gems in the vendor directory on its build servers, which Jekyll will mistakenly read and explode on.
+# Travis bundles all plugins in the vendor directory on its build servers, which Jekyll will mistakenly read and explode on.
 exclude: [vendor]
