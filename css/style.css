@@ -10,7 +10,7 @@
 @import url("base.css");				/* Default Reset, Typography, Forms, etc. */
 @import url("responsive.css");			/* 960 Grid + Media Query Layouts */
 @import url("icons.css");				/* Font Awesome Icons / Glyphicons Halflings */
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700");
+@import url("//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700");
 
 
 /* =================================================================== */
