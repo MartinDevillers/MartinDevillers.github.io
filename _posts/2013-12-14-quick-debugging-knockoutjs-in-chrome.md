@@ -4,6 +4,7 @@ title: Quick debugging KnockoutJS in Chrome with ko.dataFor($0) and ko.contextFo
 comments: true
 permalink: blog/quick-debugging-knockoutjs-in-chrome/
 redirect_from: /quick-debugging-knockoutjs-in-chrome/
+lang: en
 ---
 
 [KnockoutJS](http://knockoutjs.com/) is a kick-ass JavaScript framework for creating rich and interactive web sites. One caveat of KnockoutJS is that, after you have applied your viewmodel to your page, it may be hard to figure out what data went where. Fortunately, there's a quick trick to debugging live KnockoutJS views, right from your Chrome browser window!

@@ -219,7 +219,8 @@
 
 .menu li, .menu ul a {position:relative;}
 .menu > li {float:left;}
-.menu > li.floatr {float:right;}
+.menu > li.floatr {float:right; margin-right: -8px;}
+.menu > li.floatr > a {border-left:1px solid #666; border-right: none;}
 .menu li > a {display:block;}
 
 .menu ul {
@@ -285,8 +286,8 @@ ul.menu li a {
 .menu > li > a:hover { border-right:1px solid #707070; margin: 0 0 0 -1px; }
 
 .menu > li > a img, .menu li > ul > li > a img {
-	border:0;
-	margin-right:7px;
+	margin-right:3px;
+	display: inline-block;
 }
 
 

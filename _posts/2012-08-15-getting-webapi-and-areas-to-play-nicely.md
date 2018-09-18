@@ -4,6 +4,7 @@ title: 'ASP.NET MVC 4 RC: Getting WebApi and Areas to play nicely'
 comments: true
 permalink: blog/getting-webapi-and-areas-to-play-nicely/
 redirect_from: /getting-webapi-and-areas-to-play-nicely/
+lang: en
 ---
 
 ASP.NET MVC 4 is a framework for building scalable, standards-based web applications using well-established design patterns and the power of ASP.NET and the .NET Framework. Two powerful features of ASP.NET MVC 4 are Areas and WebApi. Areas let you partition Web applications into smaller functional groupings, while WebApi is a platform for building RESTful applications. Unfortunately, combining both features is not supported by ASP.NET MVC 4. In this blog, I discuss these limitations and present a possible solution.

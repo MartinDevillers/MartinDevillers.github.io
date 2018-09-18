@@ -4,6 +4,7 @@ title: Localizing Microsoft ReportViewer
 comments: true
 permalink: blog/localizing-microsoft-reportviewer/
 redirect_from: /localizing-microsoft-reportviewer/
+lang: en
 ---
 
 Microsoft ReportViewer Control can be localized by implementing the three [IReportViewerMessages](http://msdn.microsoft.com/en-us/library/microsoft.reporting.webforms.ireportviewermessages.aspx) interfaces. However, the documentation of these interfaces lacks the original string values, which in turn makes it difficult to provide a proper translation. In this blog, a complete listing of these values and a Dutch implementation of IReportViewerMessages are presented.

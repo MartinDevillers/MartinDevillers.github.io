@@ -4,6 +4,7 @@ title: Back from Microsoft TechEd 2014
 comments: true
 permalink: blog/back-from-microsoft-teched-2014/
 redirect_from: /back-from-microsoft-teched-2014/
+lang: en
 ---
 
 <img style="float: right" src="/assets/03-11-2014-teched6.png" alt="Microsoft TechEd Europe 2014">

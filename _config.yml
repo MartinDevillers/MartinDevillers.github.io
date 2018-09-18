@@ -11,7 +11,7 @@ permalink:        pretty
 
 # Setup
 title:            'Devillers - Freelance Software Architect'
-url:              http://www.devillers.nl
+url:              https://www.devillers.nl
 
 paginate:         5
 paginate_path: 	  "/blog/page:num/"
@@ -28,3 +28,17 @@ plugins:
 
 # Travis bundles all plugins in the vendor directory on its build servers, which Jekyll will mistakenly read and explode on.
 exclude: [vendor]
+
+t:
+  nl:
+    zoeken: Zoeken
+    telefoon: Telefoon
+    adres: Adres
+    contactgegevens: Contactgegevens
+    allerechtenvoorbehouden: Alle rechten voorbehouden.
+  en:
+    zoeken: Search
+    telefoon: Telephone
+    adres: Address
+    contactgegevens: Contactdetails
+    allerechtenvoorbehouden: All rights reserved.

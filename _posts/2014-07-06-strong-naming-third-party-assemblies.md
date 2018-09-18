@@ -4,6 +4,7 @@ title: Strong Naming Third-party Assemblies
 comments: true
 permalink: blog/strong-naming-third-party-assemblies/
 redirect_from: /strong-naming-third-party-assemblies/
+lang: en
 ---
 
 [Strong naming](http://msdn.microsoft.com/en-us/library/wd40t7ad%28v=vs.110%29.aspx) has caused a [religious](https://json.codeplex.com/workitem/22458) [war](http://nickberardi.com/json-net-strong-naming-and-nuget-woes/) [in](https://github.com/thinktecture/Thinktecture.IdentityModel.45/issues/50) [the](https://bitbucket.org/davidebbo/webactivator/issue/4/assemblies-are-not-signed) [Open](https://github.com/NancyFx/Nancy/issues/1522) [Source](https://github.com/mikehadlow/EasyNetQ/issues/192) [.NET-community](https://github.com/octokit/octokit.net/issues/405). If you are a writing a third-party library or you simply are a .NET-enthusiast, then you will definitely want to read [this extensive thread on NuGet](http://nuget.codeplex.com/discussions/247827). You will learn a lot about strong naming, its implications and the pickle the Open Source community is currently in. Be warned, the thread is *long*, contains *heated debates* and has been running for *over three years*. 

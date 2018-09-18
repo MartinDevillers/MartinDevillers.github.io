@@ -4,6 +4,7 @@ title: Good gravy, I won an award!
 comments: true
 permalink: blog/good-gravy-i-won-an-award/
 redirect_from: /good-gravy-i-won-an-award/
+lang: en
 ---
 
 The [Aia Software Thesis Awards](http://www.aiasoftware.com/index.php/en/news/aia-awards/) ceremony was held on 10 February 2012. It was a very fun day. I got to meet [Erik Meijer](http://en.wikipedia.org/wiki/Erik_Meijer_%28computer_scientist%29), [Anarchist Software Architect at Microsoft](http://www.microsoft.com/about/technicalrecognition/erik-meijer.aspx). My friends and family got to see a glimpse of my geeky side. And there were a lot of old colleagues and class mates which I caught up with. 

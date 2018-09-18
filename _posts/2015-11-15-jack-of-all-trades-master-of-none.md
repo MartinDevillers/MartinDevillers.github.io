@@ -4,6 +4,7 @@ title: Jack of all trades, master of none
 comments: true
 permalink: blog/jack-of-all-trades-master-of-none/
 excerpt: Reflecting on twenty years of computer engineering
+lang: en
 ---
 I wrote my first computer program when I was ten years old. It was a crude script written in a language called [GFA BASIC](https://en.wikipedia.org/wiki/GFA_BASIC). My “workstation”: a [Commodore 64](https://en.wikipedia.org/wiki/Commodore_64). There were no classes, methods or fancy generics. Simply a list of LINE, CIRCLE and PCIRCLE commands. Once executed, it would produce a drawing of a car. Clearing the screen and redrawing the car in a different location created a sense of motion. Busy waits or sleeps weren’t necessary: The drawing process was slow enough that simply executing a series of draw commands created an animation by itself. 
 

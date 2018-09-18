@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!--[if IE 8 ]><html class="ie ie8" lang="nl"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="nl"> <!--<![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="{{ page.lang }}"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="{{ page.lang }}"> <!--<![endif]-->
 <head>
 
 <!-- Basic Page Needs
@@ -14,8 +14,23 @@
 {% endif %}
 </title>
 
+{% assign refs = site.pages | where:"ref", page.ref %}
+
+{% if page.lang == 'nl' %}
+  {% assign ref = refs | where:"lang", "en" | first %}
 <meta name="description" content="Ik ben een freelance software architect die organisaties graag helpt met het ontwerpen en ontwikkelen van krachtige doch eenvoudige IT-oplossingen.">
-<meta name="keywords" content="freelance,software,architecture,devillers,ontwikkeling,ontwerp,architectuur,consultant,web,mobile,cloud,enterprise,soa,microsoft,java,xamarin,android,ios,azure,amazon,atlassian,sql,selenium,saml,docker,github,browserstack,knockout,jquery">
+<meta name="keywords" content="freelance,software,architectuur,devillers,ontwikkeling,ontwerp,consultant,web,mobile,cloud,enterprise,soa,microsoft,java,xamarin,android,ios,azure,amazon,atlassian,sql,selenium,saml,docker,github,browserstack,knockout,jquery,paas,saas,iaas,bitrise">
+{% endif %}
+{% if page.lang == 'en' %}
+  {% assign ref = refs | where:"lang", "nl" | first %}
+<meta name="description" content="I am a freelance software architect that enjoys helping organizations with the design and implementation of elegant yet powerful IT-solutions.">
+<meta name="keywords" content="freelance,software,architecture,devillers,development,design,consultant,web,mobile,cloud,enterprise,soa,microsoft,java,xamarin,android,ios,azure,amazon,atlassian,sql,selenium,saml,docker,github,browserstack,knockout,jquery,development,saas,iaas,bitrise">
+{% endif %}
+
+{% if ref %}
+  <link rel="alternate" hreflang="{{ ref.lang }}" href="{{ ref.url }}">
+{% endif %}
+
 <meta name="author" content="Martin Devillers">
 
 <!-- Mobile Specific Metas

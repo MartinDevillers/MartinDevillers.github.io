@@ -15,10 +15,10 @@
 
 		<!-- Contact Details -->
 		<div class="four columns">
-			<h4>Contactgegevens</h4>
+			<h4>{{ site.t[page.lang].contactgegevens }} </h4>
 			<ul class="contact-details-alt">
-				<li><i class="halflings white map-marker"></i> <p><strong>Adres:</strong> <a href="https://maps.google.com/?q=Kerkstraat+72B,+1017+GN+Amsterdam,+Netherlands" onclick="ga('send', 'event', 'Adresgegevens bekeken', 'click', 'Voet');">Kerkstraat 72B, 1017 GN Amsterdam</a></p></li>
-				<li><i class="halflings white user"></i> <p><strong>Telefoon:</strong> <a href="tel:+31625100996" onclick="ga('send', 'event', 'Telefonisch contact', 'click', 'Voet');">+31 (0)6 25 10 09 96</a></p></li>
+				<li><i class="halflings white map-marker"></i> <p><strong>{{ site.t[page.lang].adres }}:</strong> <a href="https://maps.google.com/?q=Kerkstraat+72B,+1017+GN+Amsterdam,+Netherlands" onclick="ga('send', 'event', 'Adresgegevens bekeken', 'click', 'Voet');">Kerkstraat 72B, 1017 GN Amsterdam</a></p></li>
+				<li><i class="halflings white user"></i> <p><strong>{{ site.t[page.lang].telefoon }}:</strong> <a href="tel:+31625100996" onclick="ga('send', 'event', 'Telefonisch contact', 'click', 'Voet');">+31 (0)6 25 10 09 96</a></p></li>
 				<li><i class="halflings white envelope"></i> <p><strong>Email:</strong> <a href="mailto:martin@devillers.nl" onclick="ga('send', 'event', 'E-mail contact', 'click', 'Voet');">martin@devillers.nl</a></p></li>
 			</ul>
 		</div>
@@ -69,7 +69,7 @@
 		<!-- Copyrights -->
 		<div class="eight columns">
 			<div class="copyright">
-				© 2014-2018 <a href="/">Devillers</a>, Amsterdam. Alle rechten voorbehouden. 
+				© 2014-2018 <a href="/">Devillers</a>, Amsterdam. {{ site.t[page.lang].allerechtenvoorbehouden }} 
 			</div>
 		</div>
 

@@ -4,6 +4,7 @@ title: Docker in de praktijk
 comments: true
 permalink: blog/docker-in-de-praktijk/
 excerpt: Een kijkje achter de schermen van de ov-chipkaart
+lang: nl
 ---
 De [Nederlandse Java User Group](http://www.nljug.org/) (NLJUG) heeft in haar 2015-5 editie van [Java Magazine](http://www.nljug.org/databasejava/) een artikel geplaatst over de [micro-services architectuur](http://martinfowler.com/articles/microservices.html) die [ik samen met Info Support in 2015 voor Translink heb ontworpen en geïmplementeerd](/projecten/ov-chipkaart/). Een belangrijke succesfactor van deze micro-services architectuur is de inzet van [Docker](https://www.docker.com/). Het artikel in Java Magazine geeft een mooi beeld hoe het projectteam dankzij Docker een invulling heeft gegeven aan de wensen van Translink om een flexibele en wendbare applicatie te creëren. In een notendop hebben wij met Docker het volgende bereikt:
 

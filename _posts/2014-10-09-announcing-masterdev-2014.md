@@ -5,6 +5,7 @@ comments: true
 permalink: blog/announcing-masterdev-2014/
 redirect_from: /announcing-masterdev-2014/
 excerpt: We're organizing a MasterChef spin off called M@sterDev, a 24-hour hackaton / coding competition for students!
+lang: en
 ---
 
 ![MasterDev](/assets/09-10-2014-masterdev.png)

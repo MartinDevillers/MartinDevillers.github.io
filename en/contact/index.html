@@ -1,20 +1,21 @@
 ---
 layout: default
 title: Contact
-lang: nl
-ref: bedankt
+redirect_from: /about/
+lang: en
+ref: contact
 ---
 <!-- 960 Container -->
 <div class="container floated">
 
 	<div class="sixteen floated page-title">
 
-		<h2>Contact <span>/ Hoe u mij kunt bereiken</span></h2>
+		<h2>Contact <span>/ How you can reach me</span></h2>
 
 		<nav id="breadcrumbs">
 			<ul>
-				<li>U bent hier:</li>
-				<li><a href="/">Start</a></li>
+				<li>You are here:</li>
+				<li><a href="/en/">Home</a></li>
 				<li>Contact</li>
 			</ul>
 		</nav>
@@ -40,7 +41,7 @@ ref: bedankt
 			-->
 
 			<div class="widget">
-				<h4>Adres- en contactgegevens</h4>
+				<h4>Address and contact details</h4>
 
 				<ul class="contact-informations">
 					<li><span class="address">Kerkstraat 72B</span></li>
@@ -49,35 +50,35 @@ ref: bedankt
 				</ul>
 
 				<ul class="contact-informations second">
-					<li><i class="halflings headphones"></i> <p>+31 (0)6 25 10 09 96</p></li>
-					<li><i class="halflings envelope"></i> <p>martin@devillers.nl</p></li>
+					<li><i class="halflings headphones"></i> <p><a href="tel:+31625100996" onclick="ga('send', 'event', 'Telefonisch contact', 'click', 'Contactpagina');">+31 (0)6 25 10 09 96</a></p></li>
+					<li><i class="halflings envelope"></i> <p><a href="mailto:martin@devillers.nl" onclick="ga('send', 'event', 'E-mail contact', 'click', Contactpagina');">martin@devillers.nl</a></p></li>
 					<li><i class="halflings globe"></i> <p>www.devillers.nl</p></li>
 				</ul>
 				
 				<ul class="contact-informations second">
-					<li><i class="halflings linkedin"></i> <p><a href="https://www.linkedin.com/in/mdevillers">/in/mdevillers</a></p></li>
-					<li><i class="halflings twitter"></i> <p><a href="https://twitter.com/MartinDevillers">@MartinDevillers</a></p></li>
-					<li><i class="halflings facebook"></i> <p><a href="https://www.facebook.com/mma.devillers">mma.devillers</a></p></li>
+					<li><i class="halflings linkedin"></i> <p><a href="https://www.linkedin.com/in/mdevillers" onclick="ga('send', 'event', 'LinkedIn bekeken', 'click', 'Contactpagina');">/in/mdevillers</a></p></li>
+					<li><i class="halflings twitter"></i> <p><a href="https://twitter.com/MartinDevillers" onclick="ga('send', 'event', 'Twitter bekeken', 'click', 'Contactpagina');">@MartinDevillers</a></p></li>
+					<li><i class="halflings facebook"></i> <p><a href="https://www.facebook.com/mma.devillers" onclick="ga('send', 'event', 'Facebook bekeken', 'click', 'Contactpagina');">mma.devillers</a></p></li>
 				</ul>
 
 			</div>
 			
 			<div class="widget">
 				<h4>Open Source</h4>
-				<p>Voor de techneuten, bekijk mijn bijdragen aan de community:</p>
-				<h5><a href="https://stackoverflow.com/users/546967/martin-devillers">StackOverflow</a></h5>
-				<a href="https://stackoverflow.com/users/546967/martin-devillers">
+				<p>For the devs, view my contributions to the community:</p>
+				<h5><a href="https://stackoverflow.com/users/546967/martin-devillers" onclick="ga('send', 'event', 'Stack Overflow bekeken', 'click', 'Contactpagina');">StackOverflow</a></h5>
+				<a href="https://stackoverflow.com/users/546967/martin-devillers" onclick="ga('send', 'event', 'Stack Overflow bekeken', 'click', 'Contactpagina');">
 					<img src="https://stackoverflow.com/users/flair/546967.png" width="208" height="58" alt="profile for Martin Devillers at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Martin Devillers at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
 				</a>
-				<h5><a href="https://github.com/MartinDevillers">GitHub</a></h5>
+				<h5><a href="https://github.com/MartinDevillers" onclick="ga('send', 'event', 'GitHub bekeken', 'click', 'Contactpagina');">GitHub</a></h5>
 				<iframe src="//githubbadge.appspot.com/MartinDevillers?a=0" style="border: 0;height: 108px;width: 200px;overflow: hidden;"></iframe>
 			</div>
 
 			<div class="widget">
-				<h4>Werktijden</h4>
+				<h4>Working hours</h4>
 				<ul class="contact-informations hours">
-					<li><i class="halflings time"></i>Maandag - Vrijdag <span class="hours">7 am tot 7 pm</span></li>
-					<li><i class="halflings ban-circle"></i>Zaterdag - Zondag <span class="hours">Gesloten</span></li>
+					<li><i class="halflings time"></i>Monday - Friday <span class="hours">7 am till 7 pm</span></li>
+					<li><i class="halflings ban-circle"></i>Saturday - Sunday <span class="hours">Closed</span></li>
 				</ul>
 			</div>
 
@@ -88,16 +89,12 @@ ref: bedankt
 	<!-- Page Content -->
 	<div class="eleven floated right">
 		<section class="page-content">
-		
-			<div class="notification success closeable">
-				<p><span>Bedankt!</span> Uw bericht is succesvol verstuurd. Ik zal zo spoedig mogelijk contact met u opnemen.</p>
-			</div>
 
-			<h3 class="margin-reset">Over Martin Devillers</h3>
-			<p>Ik ben een freelance software architect die organisaties graag helpt met het ontwerpen en ontwikkelen van krachtige doch eenvoudige IT-oplossingen. Met tien jaar werkervaring in de IT, diepgaande technische kennis van web, mobile en cloud en een Cum Laude universitaire IT-opleiding beschik ik over de juiste balans tussen kennis, ervaring en theorie om uw organisatie optimaal van dienst te zijn.</p>
+			<h3 class="margin-reset">About Martin Devillers</h3>
+			<p>I am a freelance software architect that enjoys helping organizations with the design and implementation of elegant yet powerful IT-solutions. With over ten  years of experience in IT, in-depth knowledge of web, mobile and cloud-technologies and a university honorary graduate in tech, I possess the right balance between knowledge and experience to optimally assist your organization.</p>
 		
-			<h3>Locatie</h3>
-			<p>Ik woon in het centrum van Amsterdam en werk bij voorkeur in mijn stad of vanuit mijn kantoor.</p>
+			<h3>Location</h3>
+			<p>I live in the center of Amsterdam and preferably work in my city or from my office.</p>
 
 			<!-- Google Maps -->
 			<section class="google-map-container">
@@ -125,8 +122,8 @@ ref: bedankt
 			<!-- Google Maps / End -->
 
 
-			<h3 class="margin">Contactformulier</h3>
-			<p class="margin">Gebruik het onderstaande formulier om mij een bericht te sturen. Ik zal zo spoedig mogelijk contact met u opnemen.</p>
+			<h3 class="margin">Contact Form</h3>
+			<p class="margin">Use the form below to send me a message. I will contact you as soon as possible.</p>
 
 				<!-- Contact Form -->
 				<section id="contact">
@@ -140,7 +137,7 @@ ref: bedankt
 						<fieldset>
 
 							<div>
-								<label for="name" accesskey="U">Naam:</label>
+								<label for="name" accesskey="U">Name:</label>
 								<input name="name" type="text" id="name" />
 							</div>
 
@@ -150,15 +147,15 @@ ref: bedankt
 							</div>
 
 							<div>
-								<label for="body" accesskey="C">Bericht: <span>*</span></label>
+								<label for="body" accesskey="C">Message: <span>*</span></label>
 								<textarea name="body" cols="40" rows="3" id="body" spellcheck="true"></textarea>
 							</div>
 							
-							<input type="hidden" name="_next" value="//devillers.nl/contact/bedankt"/>
+							<input type="hidden" name="_next" value="//devillers.nl/en/contact/thankyou"/>
 
 						</fieldset>
 
-						<input type="submit" class="submit" id="submit" value="Verstuur Bericht" />
+						<input type="submit" class="submit" id="submit" value="Send Message" />
 						<div class="clearfix"></div>
 
 					</form>

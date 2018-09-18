@@ -4,6 +4,7 @@ title: Easy way to improve DbEntityValidationException of Entity Framework
 comments: true
 permalink: blog/improving-dbentityvalidationexception/
 redirect_from: /improving-dbentityvalidationexception/
+lang: en
 ---
 
 `DbEntityValidationException` is the exception thrown by Entity Framework when entity validation fails. While this exception is extremely valuable, the exception message omits the most important bit of information: **The actual validation errors**. In this blog, I present a quick and easy way to unwrap and rethrow these exceptions with a more meaningful message.
