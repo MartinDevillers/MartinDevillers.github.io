@@ -99,7 +99,7 @@
 
 	<li><a href="/contact/" {% if current[1] == 'contact' %}id="current"{% endif %}><i class="halflings white envelope"></i> Contact</a></li>
 
-	<li class="floatr"><a href="{{ ref.url | default:"/en/" }}"><img src="/images/gb.gif"/> English</a></li>
+	<li class="floatr"><a href="{{ ref.url | default:"/en/" }}"><img src="/images/gb.gif" alt="English language"/> English</a></li>
 	
 </ul>
 {% endif %}
@@ -137,7 +137,7 @@
 
 	<li><a href="/en/contact/" {% if current[2] == 'contact' %}id="current"{% endif %}><i class="halflings white envelope"></i> Contact</a></li>
 	
-	<li class="floatr"><a href="{{ ref.url | default:"/" }}"><img src="/images/nl.gif"/> Nederlands</a></li>
+	<li class="floatr"><a href="{{ ref.url | default:"/" }}"><img src="/images/nl.gif" alt="Nederlandse taal"/> Nederlands</a></li>
 
 </ul>
 {% endif %}
