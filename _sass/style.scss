@@ -162,7 +162,7 @@
 .style-2 { width: 1020px !important; margin-left: 0 !important; }
 .style-2 ul li:first-child { margin-left: 1px !important; }
 
-.js .selectnav {
+.selectnav {
 	display: none;
 }
 
@@ -4297,7 +4297,7 @@ table.standard-table.shop td {
 	.contact-details,
 	.top-search,
 	.slide-caption,
-	.js #responsive,
+	#responsive,
 	.left-corner,
 	.right-corner {
 		display: none;
@@ -4308,7 +4308,7 @@ table.standard-table.shop td {
 		margin: 0 0 40px 0;
 	}
 
-	.js .selectnav {
+	.selectnav {
 		display: block;
 	}
 
