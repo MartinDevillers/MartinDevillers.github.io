@@ -7,10 +7,10 @@
 /* =================================================================== */
 /* Import Section
 ====================================================================== */
-@import url("base.css");				/* Default Reset, Typography, Forms, etc. */
-@import url("responsive.css");			/* 960 Grid + Media Query Layouts */
-@import url("icons.css");				/* Font Awesome Icons / Glyphicons Halflings */
-@import url("//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700");
+@import "base";				/* Default Reset, Typography, Forms, etc. */
+@import "responsive";			/* 960 Grid + Media Query Layouts */
+@import "icons";				/* Font Awesome Icons / Glyphicons Halflings */
+@import "fonts";
 
 
 /* =================================================================== */
@@ -1572,6 +1572,7 @@ html[xmlns] .slides {display: block;}
 	-o-transition: opacity 180ms ease-in-out;
 	-ms-transition: opacity 180ms ease-in-out;
 	transition: opacity 180ms ease-in-out;
+	background-color: #eee
 }
 
 .portfolio-item:hover img {
@@ -2452,7 +2453,7 @@ ol li ol.childlist .comment-des {
 	background: #f6f6f6;
 	color: #666;
 	border-radius: 2px;
-	-webkit-box-shadow:: inset 0px -1px 0px 0px rgba(0,0,0, 0.06);
+	-webkit-box-shadow: inset 0px -1px 0px 0px rgba(0,0,0, 0.06);
 	box-shadow: inset 0px -1px 0px 0px rgba(0,0,0, 0.06);
 	padding: 17px 20px 20px 20px;
 }
@@ -2666,7 +2667,7 @@ ul.option-set li a:active { background: #fff; }
 	background: #f6f6f6;
 	color: #666;
 	border-radius: 2px;
-	-webkit-box-shadow:: inset 0px -1px 0px 0px rgba(0,0,0, 0.07);
+	-webkit-box-shadow: inset 0px -1px 0px 0px rgba(0,0,0, 0.07);
 	box-shadow: inset 0px -1px 0px 0px rgba(0,0,0, 0.07);
 }
 
@@ -3179,7 +3180,7 @@ table.standard-table tr:hover td {background-color: #fafafa;}
 	padding: 25px;
 	line-height: 21px;
 	border-radius: 2px;
-	-webkit-box-shadow:: inset 0px -1px 0px 0px rgba(0,0,0, 0.06);
+	-webkit-box-shadow: inset 0px -1px 0px 0px rgba(0,0,0, 0.06);
 	box-shadow: inset 0px -1px 0px 0px rgba(0,0,0, 0.06);
 }
 
@@ -3435,7 +3436,7 @@ table.standard-table tr:hover td {background-color: #fafafa;}
 	background: #f6f6f6;
 	color: #666;
 	border-radius: 2px;
-	-webkit-box-shadow:: inset 0px -1px 0px 0px rgba(0,0,0, 0.06);
+	-webkit-box-shadow: inset 0px -1px 0px 0px rgba(0,0,0, 0.06);
 	box-shadow: inset 0px -1px 0px 0px rgba(0,0,0, 0.06);
 }
 

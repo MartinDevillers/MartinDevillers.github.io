@@ -32,7 +32,7 @@
 
     /* Equal Sidebar */
     .floated.sidebar { position: absolute; top: 0; bottom: 0; }
-    .floated.sidebar.right { float-right; right: 0; left: auto; }
+    .floated.sidebar.right { float: right; right: 0; left: auto; }
     .floated.sidebar.left { float: left; left: 0; right: auto; }
     .floated.right { float: right; }
 

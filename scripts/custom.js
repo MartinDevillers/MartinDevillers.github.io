@@ -418,6 +418,28 @@ $(window).resize(function () {
 
 	});
 
+/*----------------------------------------------------*/
+/*	Twitter
+/*----------------------------------------------------*/
+	var twitter = {
+		"id": '663368765430738944',
+		"domId": 'twitter',
+		"maxTweets": 1,
+		"enableLinks": true,
+		"showUser": false,
+		"showTime": true,
+		"dateFunction": relative_time,
+		"showRetweet": false,
+		"showInteraction": false				  
+	};
+	twitterFetcher.fetch(twitter);
+
+/*----------------------------------------------------*/
+/*	Lazy Load
+/*----------------------------------------------------*/
+	window.lazyLoad = new LazyLoad({	
+        elements_selector: "img, iframe.lazy"
+    });
 
 /* ------------------ End Document ------------------ */
 });
