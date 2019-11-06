@@ -14,7 +14,7 @@ ref: ov-chipkaart
 		<!-- Portfolio Navi -->
 		<div id="portfolio-navi">
 			<ul>
-				<li><a class="prev" href="/en/projects/kanzi/"><b>←</b> Previous</a></li>
+				<li><a class="prev" href="/en/projects/wing/"><b>←</b> Previous</a></li>
 				<li><a class="next" href="/en/projects/screenconsult/">Next <b>→</b></a></li>
 			</ul>
 		</div>
@@ -34,8 +34,8 @@ ref: ov-chipkaart
 		<!-- Slider  -->
 		<section class="flexslider">
 			<ul class="slides">
-				<li><a href="/images/portfolio/single-project-01-large.jpg" data-fancybox-group="carousel" title="Renewed ov-chipkaart website"><img src="/images/portfolio/single-project-01.jpg" alt="Renewed ov-chipkaart website" /></a></li>
-				<li><a href="/images/portfolio/single-project-02-large.jpg" data-fancybox-group="carousel" title="Successful go live"><img src="/images/portfolio/single-project-02.jpg" alt="Successful go live" /></a></li>
+				<li><a href="/images/portfolio/single-project-01-large.jpg" rel="fancybox-gallery" title="Renewed ov-chipkaart website"><img src="/images/portfolio/single-project-01.jpg" alt="Renewed ov-chipkaart website" /></a></li>
+				<li><a href="/images/portfolio/single-project-02-large.jpg" rel="fancybox-gallery" title="Successful go live"><img src="/images/portfolio/single-project-02.jpg" alt="Successful go live" /></a></li>
 			</ul>
 		</section>
 		<!-- Slider / End -->
@@ -50,7 +50,7 @@ ref: ov-chipkaart
 	<div class="twelve columns">
 		<p>As a solution architect I am responsible for the technical and logical architecture of the new front-office of the public transport chip card. In other words, the website and mobile app of the OV chip card that millions of travelers use every day.</p>
 		<p>A challenging project with many different facets and interesting issues. Below is a selection of the requirements that the public transport chip card must meet:</p>
-		<ul class="disc">
+		<ul class="disc large">
 			<li>Suitable for all ages, population groups, tourists and people with disabilities</li>
 			<li>Scalable up to 2500 simultaneous users</li>
 			<li>Meets the Personal Data Protection Act (WBP)</li>
@@ -84,45 +84,7 @@ ref: ov-chipkaart
 
 <div class="line" style="margin: 20px 0 37px 0;"></div>
 
-<!-- Related Works -->
-<div class="related-works">
-
-	<!-- 960 Container -->
-	<div class="container" style="margin-bottom: -10px;">
-
-			<div class="sixteen columns">
-				<h3 class="margin">Other Projects</h3>
-			</div>
-
-				<div class="four columns">
-					<a href="/en/projects/screenconsult/" class="portfolio-item isotope">
-						<figure>
-							<div class="picture"><img src="/images/portfolio/portfolio-02.jpg" alt="ScreenConsult, Rijnstate, Software Architect"/><div class="image-overlay-link"></div></div>
-							<figcaption class="item-description">
-								<h5>ScreenConsult, Rijnstate</h5>
-								<span>Software Architect</span>
-							</figcaption>
-						</figure>
-					</a>
-				</div>
-
-				<div class="four columns">
-					<a href="/en/projects/kanzi/" class="portfolio-item isotope">
-						<figure>
-							<div class="picture"><img src="/images/portfolio/portfolio-03.jpg" alt="Kanzi, Info Support, Product Manager"/><div class="image-overlay-link"></div></div>
-							<figcaption class="item-description">
-								<h5>Kanzi, Info Support</h5>
-								<span>Product Manager</span>
-							</figcaption>
-						</figure>
-					</a>
-				</div>
-
-	</div>
-	<!-- End 960 Container -->
-
-</div>
-<!-- Related Works / End -->
+{% include_relative _other-projects.html %}
 
 </div>
 <!-- Page Content / End -->

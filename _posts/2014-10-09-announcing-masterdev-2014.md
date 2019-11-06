@@ -10,7 +10,7 @@ lang: en
 
 ![MasterDev](/assets/09-10-2014-masterdev.png)
 
-We're organizing a [MasterChef](http://www.fox.com/masterchef/) spin off called [M@sterDev](http://masterdev.nl/). The idea is that several teams of students compete in a 24-hour hackaton. Pizza, drinks and hotel-room included! The event is from 21 to 22 november. Accepting all Dutch computer science, information science and IT-oriented business science students. [Click here to sign-up](http://masterdev.nl/)
+We're organizing a [MasterChef](https://www.fox.com/masterchef/) spin off called [M@sterDev](http://masterdev.nl/). The idea is that several teams of students compete in a 24-hour hackaton. Pizza, drinks and hotel-room included! The event is from 21 to 22 november. Accepting all Dutch computer science, information science and IT-oriented business science students. [Click here to sign-up](http://masterdev.nl/)
 
 # Challenge
 

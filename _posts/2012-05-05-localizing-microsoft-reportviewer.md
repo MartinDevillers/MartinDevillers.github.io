@@ -7,7 +7,7 @@ redirect_from: /localizing-microsoft-reportviewer/
 lang: en
 ---
 
-Microsoft ReportViewer Control can be localized by implementing the three [IReportViewerMessages](http://msdn.microsoft.com/en-us/library/microsoft.reporting.webforms.ireportviewermessages.aspx) interfaces. However, the documentation of these interfaces lacks the original string values, which in turn makes it difficult to provide a proper translation. In this blog, a complete listing of these values and a Dutch implementation of IReportViewerMessages are presented.
+Microsoft ReportViewer Control can be localized by implementing the three [IReportViewerMessages](https://msdn.microsoft.com/en-us/library/microsoft.reporting.webforms.ireportviewermessages.aspx) interfaces. However, the documentation of these interfaces lacks the original string values, which in turn makes it difficult to provide a proper translation. In this blog, a complete listing of these values and a Dutch implementation of IReportViewerMessages are presented.
 
 ## Microsoft ReportViewer
 
@@ -26,7 +26,7 @@ More specifically, these interfaces are `IReportViewerMessages`, `IReportViewerM
 
 ## The Bad
 
-While Microsoft was graceful enough to [document](http://msdn.microsoft.com/en-us/library/microsoft.reporting.webforms.ireportviewermessages.aspx) [these](http://msdn.microsoft.com/en-us/library/microsoft.reporting.webforms.ireportviewermessages2.aspx) [interfaces](http://msdn.microsoft.com/en-us/library/microsoft.reporting.webforms.ireportviewermessages3.aspx), their documentation lacks the original values of these string properties. As a result, anyone who wants to create a meaningful translation of these properties must deduce the meaning from the property’s name and description, rather than the original value. This can be quite challenging when faced with cryptic names such as `ParameterAreaButtonToolTip`, `NullValueText` or `ClientPrintControlLoadFailed`.
+While Microsoft was graceful enough to [document](https://msdn.microsoft.com/en-us/library/microsoft.reporting.webforms.ireportviewermessages.aspx) [these](https://msdn.microsoft.com/en-us/library/microsoft.reporting.webforms.ireportviewermessages2.aspx) [interfaces](https://msdn.microsoft.com/en-us/library/microsoft.reporting.webforms.ireportviewermessages3.aspx), their documentation lacks the original values of these string properties. As a result, anyone who wants to create a meaningful translation of these properties must deduce the meaning from the property’s name and description, rather than the original value. This can be quite challenging when faced with cryptic names such as `ParameterAreaButtonToolTip`, `NullValueText` or `ClientPrintControlLoadFailed`.
 
 ## The Ugly
 

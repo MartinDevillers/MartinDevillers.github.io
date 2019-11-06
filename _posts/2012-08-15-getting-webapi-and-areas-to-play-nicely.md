@@ -43,7 +43,7 @@ The culprit is the `DefaultHttpControllerSelector` which is ASP.NET WebAPI’s d
 
 ## In search for a solution
 
-Fortunately, through the power of Inversion of Control, developers can inject their own implementation of `IHttpControllerSelector`. [In a related blog by Andrew Malkov](http://netmvc.blogspot.be/2012/06/aspnet-mvc-4-webapi-support-areas-in.html), he attempts to tackle the problem by creating a custom implementation called `AreaHttpControllerSelector`.
+Fortunately, through the power of Inversion of Control, developers can inject their own implementation of `IHttpControllerSelector`. [In a related blog by Andrew Malkov](https://netmvc.blogspot.be/2012/06/aspnet-mvc-4-webapi-support-areas-in.html), he attempts to tackle the problem by creating a custom implementation called `AreaHttpControllerSelector`.
 
 This class allows area specific WebApi controllers to co-exist, provided one makes a minor modification to the WebApi routes. In order to function, a default route parameter called “area” must be added to the `HttpRoute` definition in the `AreaRegistration` file.
 
@@ -137,7 +137,7 @@ Now both the regular routes and the WebApi routes have knowledge of their corres
 
 ## Solution – Part 2
 
-The second part of the solution is to create an implementation of `IHttpControllerSelector` that actually uses the area name. I took the `AreaHttpControllerSelector` class from [Andrew Malkov’s blog post](http://netmvc.blogspot.be/2012/06/aspnet-mvc-4-webapi-support-areas-in.html) and used it as a base for my own solution.
+The second part of the solution is to create an implementation of `IHttpControllerSelector` that actually uses the area name. I took the `AreaHttpControllerSelector` class from [Andrew Malkov’s blog post](https://netmvc.blogspot.be/2012/06/aspnet-mvc-4-webapi-support-areas-in.html) and used it as a base for my own solution.
 
 ```c#
 namespace MvcApplication.Infrastructure.Dispatcher
@@ -253,7 +253,7 @@ namespace MvcApplication.Infrastructure.Dispatcher
 }
 ```
 
-If you want to learn more about the technical details of the solution, I suggest you read [Andrew’s excellent blog post](http://netmvc.blogspot.be/2012/06/aspnet-mvc-4-webapi-support-areas-in.html) first. The most significant modifications are:
+If you want to learn more about the technical details of the solution, I suggest you read [Andrew’s excellent blog post](https://netmvc.blogspot.be/2012/06/aspnet-mvc-4-webapi-support-areas-in.html) first. The most significant modifications are:
 
 * Changed the GetAreaName method in order to retrieve the area name from the DataTokens property rather than the RouteData.
 * Added support for “arealess” WebApi controllers (e.g. those that reside in the root) to the GetControllerType method.

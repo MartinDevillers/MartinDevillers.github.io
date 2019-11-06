@@ -7,11 +7,11 @@ redirect_from: /quick-debugging-knockoutjs-in-chrome/
 lang: en
 ---
 
-[KnockoutJS](http://knockoutjs.com/) is a kick-ass JavaScript framework for creating rich and interactive web sites. One caveat of KnockoutJS is that, after you have applied your viewmodel to your page, it may be hard to figure out what data went where. Fortunately, there's a quick trick to debugging live KnockoutJS views, right from your Chrome browser window!
+[KnockoutJS](https://knockoutjs.com/) is a kick-ass JavaScript framework for creating rich and interactive web sites. One caveat of KnockoutJS is that, after you have applied your viewmodel to your page, it may be hard to figure out what data went where. Fortunately, there's a quick trick to debugging live KnockoutJS views, right from your Chrome browser window!
 
 ## Step by step guide
 
- 1. For this guide, we will be using one of the [official KnockoutJS examples](http://knockoutjs.com/examples/contactsEditor.html).
+ 1. For this guide, we will be using one of the [official KnockoutJS examples](https://knockoutjs.com/examples/contactsEditor.html).
  2. Say you want to see the data behind the second contact (Sensei Miyagi).
  3. Right-click the first input box of the second contact (the one with the text 'Sensei').
  4. Select 'Inspect element'. The Chrome Developer Toolbar will open.
@@ -24,7 +24,7 @@ lang: en
 ![Screenshot of the expected output of the Step by step guide](/assets/14-12-2013-debugging-knockoutjs-with-chrome.png)
  
 ## What is this black magic?
-This trick is a combination of [Chrome's $0-$4 feature](https://developers.google.com/chrome-developer-tools/docs/commandline-api#0-4) and [KnockoutJS's utility methods](http://knockoutjs.com/documentation/unobtrusive-event-handling.html). In short, Chrome remembers which elements you have selected in the Chrome Developer Toolbar and exposes these elements under the alias `$0`, `$1`, `$2`, `$3`, `$4`. So when you right-click an element in your browser and select 'Inspect element', this element automagically becomes available under the alias `$0`. You can use this trick with KnockoutJS, AngularJS, jQuery or any other JavaScript framework.
+This trick is a combination of [Chrome's $0-$4 feature](https://developers.google.com/chrome-developer-tools/docs/commandline-api#0-4) and [KnockoutJS's utility methods](https://knockoutjs.com/documentation/unobtrusive-event-handling.html). In short, Chrome remembers which elements you have selected in the Chrome Developer Toolbar and exposes these elements under the alias `$0`, `$1`, `$2`, `$3`, `$4`. So when you right-click an element in your browser and select 'Inspect element', this element automagically becomes available under the alias `$0`. You can use this trick with KnockoutJS, AngularJS, jQuery or any other JavaScript framework.
 
 The other side of the trick is KnockoutJS's utility methods `ko.dataFor` and `ko.contextFor`:
 

@@ -50,7 +50,7 @@
 		background: url(../images/bg/noise.png) repeat;
 		font-size: 13px;
 		line-height: 21px;
-		color: #666;
+		color: #333;
 		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 		-webkit-text-size-adjust: 100%;
 	}
@@ -134,13 +134,13 @@
 /* #Typography
 ================================================== */
 	h1, h2, h3, h4, h5, h6 {
-		color: #333;
+		color: #111;
 		font-weight: 600;
 		letter-spacing: -0.2px;
 	}
 	
 	h2 span, h3 span {
-		color: #888;
+		color: #666;
 		font-weight: 200;
 	}
 		
@@ -154,10 +154,10 @@
 
 	p { margin: 0 0 15px 0; line-height: 21px;}
 	p img { margin: 0; }
-	p.lead { font-size: 21px; line-height: 27px; color: #777;  }
+	p.lead { font-size: 21px; line-height: 27px; color: #222;  }
 
 	em { font-style: italic; }
-	strong { font-weight: 600; color: #333; }
+	strong { font-weight: 600; color: #111; }
 	small { font-size: 80%; }
 
 	hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 10px 0 30px; height: 0; }
@@ -166,7 +166,7 @@
 /* #Links
 ================================================== */
 	a, a:visited { color: #169fe6; text-decoration: none; outline: 0; -webkit-transition: color 0.1s ease-in-out; -moz-transition: color 0.1s ease-in-out; -o-transition: color 0.1s ease-in-out; -transition: color 0.1s ease-in-out; }
-	a:hover, a:focus { color: #888; }
+	a:hover, a:focus { color: #666; }
 	a b, span b { font-family: Verdana, Tahoma; font-weight: normal; opacity: 0.5;}
 	span b { line-height: 14px; }
 	p a, p a:visited { line-height: inherit; }
@@ -202,7 +202,7 @@
 		padding: 8px 9px;
 		outline: none;
 		font-size: 13px;
-		color: #888;
+		color: #666;
 		margin: 0;
 		max-width: 100%;
 		display: block;
@@ -218,7 +218,7 @@
 	input[type="email"]:focus,
 	textarea:focus {
 		border: 1px solid #d6d6d6;
-		color: #888; 
+		color: #666; 
 		}
 	textarea {
 		min-height: 60px; }
@@ -237,7 +237,7 @@
 	legend span {
 		font-weight: normal;
 		font-size: 13px;
-		color: #444; }
+		color: #222; }
 
 /* #Misc
 ================================================== */
