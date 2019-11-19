@@ -3314,6 +3314,10 @@ table.standard-table tr:hover td {background-color: #fafafa;}
 	line-height: 21px;
 }
 
+.post-content img[src*="#inline"] {
+	display: inline;
+ }
+
 .post-img a img {
 	opacity: 1;
 	filter: alpha(opacity=100);
