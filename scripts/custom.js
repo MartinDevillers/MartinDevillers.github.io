@@ -439,7 +439,23 @@ $(window).resize(function () {
 /*----------------------------------------------------*/
 	window.lazyLoad = new LazyLoad({	
         elements_selector: "img, iframe.lazy"
-    });
+	});
+
+/*----------------------------------------------------*/
+/*	Google Maps
+/*----------------------------------------------------*/
+	$('#googlemaps').gMap({
+		maptype: 'ROADMAP',
+		scrollwheel: false,
+		zoom: 10,
+		markers: [
+			{
+				address: 'Kerkstraat 72B, 1017 GN Amsterdam, Netherlands',
+				html: '',
+				popup: false,
+			}
+		],
+	});
 
 /* ------------------ End Document ------------------ */
 });
