@@ -10,7 +10,7 @@ kramdown:
 permalink:        pretty
 
 # Setup
-title:            'Devillers - Freelance Software Architect'
+title:            'Devillers - Freelance Software Engineer'
 url:              https://www.devillers.nl
 
 paginate:         5

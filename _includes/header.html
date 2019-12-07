@@ -12,7 +12,7 @@
 		<div class="ten columns">
 			<div id="logo">
 				<h1><a href="/"><img src="/images/devillers.png" alt="Martin Devillers" srcset="/images/devillers@2x.png 2x"/></a></h1>
-				<div id="tagline">Freelance Software Architect</div>
+				<div id="tagline">Freelance Software Engineer</div>
 				<div class="clearfix"></div>
 			</div>
 		</div>
@@ -25,7 +25,7 @@
 				<li class="twitter"><a href="https://twitter.com/MartinDevillers" onclick="ga('send', 'event', 'Twitter bekeken', 'click', 'Kop');">Twitter</a></li>
 				<li class="facebook"><a href="https://www.facebook.com/mma.devillers" onclick="ga('send', 'event', 'Facebook bekeken', 'click', 'Kop');">Facebook</a></li>
 				<li class="gplus"><a href="https://plus.google.com/+DevillersNlArchitect" onclick="ga('send', 'event', 'Google Plus bekeken', 'click', 'Kop');">Google Plus</a></li>
-				<li class="linkedin"><a href="https://www.linkedin.com/in/mdevillers" onclick="ga('send', 'event', 'LinkedIn bekeken', 'click', 'Kop');">LinkedIn</a></li>				
+				<li class="linkedin"><a href="https://www.linkedin.com/in/devillers" onclick="ga('send', 'event', 'LinkedIn bekeken', 'click', 'Kop');">LinkedIn</a></li>
 				<li class="github"><a href="https://github.com/MartinDevillers" onclick="ga('send', 'event', 'GitHub bekeken', 'click', 'Kop');">GitHub</a></li>
 				<li class="stackoverflow"><a href="https://stackoverflow.com/users/546967/martin-devillers" onclick="ga('send', 'event', 'Stack Overflow bekeken', 'click', 'Kop');">Stack Overflow</a></li>
 				<li class="rss"><a href="/atom.xml">RSS</a></li>
@@ -66,7 +66,7 @@
 <ul class="menu" id="responsive">
 
 	<li><a href="/" {% if current[1] == null %}id="current"{% endif %}><i class="halflings white home"></i> Home</a></li>
-	
+
 	<li><a href="/visie/" {% if current[1] == 'visie' %}id="current"{% endif %}><i class="halflings white eye-open"></i> Visie</a></li>
 
 	<li><a href="/dienstverlening/" {% if current[1] == 'dienstverlening' %}id="current"{% endif %}><i class="halflings white cog"></i> Dienstverlening</a>
@@ -93,20 +93,20 @@
 		</ul>
 		<!-- Second Level / End -->
 	</li>
-	
+
 	<li><a href="/blog/" {% if current[1] == 'blog' %}id="current"{% endif %}><i class="halflings white pencil"></i> Blog</a></li>
 
 	<li><a href="/contact/" {% if current[1] == 'contact' %}id="current"{% endif %}><i class="halflings white envelope"></i> Contact</a></li>
 
 	<li class="floatr"><a href="{{ ref.url | default:"/en/" }}"><img src="/images/gb.gif" alt="English language"/> English</a></li>
-	
+
 </ul>
 {% endif %}
 {% if page.lang == 'en' %}
 <ul class="menu" id="responsive">
 
 	<li><a href="/en/" {% if current[2] == null %}id="current"{% endif %}><i class="halflings white home"></i> Home</a></li>
-	
+
 	<li><a href="/en/vision/" {% if current[2] == 'vision' %}id="current"{% endif %}><i class="halflings white eye-open"></i> Vision</a></li>
 
 	<li><a href="/en/services/" {% if current[2] == 'services' %}id="current"{% endif %}><i class="halflings white cog"></i> Services</a>
@@ -133,11 +133,11 @@
 		</ul>
 		<!-- Second Level / End -->
 	</li>
-	
+
 	<li><a href="/blog/" {% if current[1] == 'blog' %}id="current"{% endif %}><i class="halflings white pencil"></i> Blog</a></li>
 
 	<li><a href="/en/contact/" {% if current[2] == 'contact' %}id="current"{% endif %}><i class="halflings white envelope"></i> Contact</a></li>
-	
+
 	<li class="floatr"><a href="{{ ref.url | default:"/" }}"><img src="/images/nl.gif" alt="Nederlandse taal"/> Nederlands</a></li>
 
 </ul>
