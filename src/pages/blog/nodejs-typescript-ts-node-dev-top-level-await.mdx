@@ -1,0 +1,86 @@
+---
+layout: post
+title: Nodejs, TypeScript, ts-node-dev & top-level await
+comments: true
+permalink: blog/nodejs-typescript-ts-node-dev-top-level-await/
+excerpt: Where we are, where we are headed and where we want to be
+lang: en
+date: "2020-12-11"
+thumb: /assets/2020-12-11-splash.svg
+tags:
+ - Q&A
+ - TypeScript
+ - NodeJS
+---
+
+I'm crossposting [my StackOverflow answer](https://stackoverflow.com/questions/64610476/nodejs-typescript-ts-node-dev-top-level-await/) on the below question from user 'Heitx' because it received a significant amount of votes and views. 
+
+# Original question from StackOverflow
+
+I have spent an hour now searching for a solution to a new error after needing top-level await. Everything else I have tried so far did not solve the error such as adding `"type": "module"` to the package.json file. 
+
+The message of the error is `Cannot use import statement outside a module` when starting the service.
+If I revert the change `"module": "ESNext",` to `"module": "commonjs",`, it works fine (except the await keywords have to be removed and somehow refactored to work without await).
+
+In addition, I use ts-node-dev to run the service which can be seen in the package.json file.
+
+ - The new package I need is kafkajs.
+ - node version: v14.9.0
+ - TypeScript version: 4.0
+
+```json title=package.json
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "microservice",
+  "main": "src/index.ts",
+  "author": "",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "NODE_ENV=development tsnd --respawn --files src/index.ts",
+    "prod": "NODE_ENV=production tsnd --respawn --transpile-only --files src/index.ts",
+    "test": "mocha --exit -r ts-node/register tests/**/*.spec.ts",
+    "eslint": "eslint src/**/*.ts"
+  },
+```
+
+```json title=tsconfig.json
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "outDir": "dist",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "ts-node": {
+    "files": true,
+    "transpileOnly": true
+  },
+  "include": ["src/**/*.ts", "declariations/**.d.ts"],
+  "exclude": ["node_modules", ".vscode"]
+}
+```
+
+# My answer
+
+**TL;DR**: Don't use ECMAScript modules with ts-node or ts-node-dev (yet); just refactor the top-level await out
+
+Today I tumbled down the same rabbit hole, starting with the innocuous error:
+
+```terminal title="npm run dev"
+Top-level 'await' expressions are only allowed when the 'module' option is set to 'esnext' or 'system', and the 'target' option is set to 'es2017' or higher.
+```
+
+As a result, I felt inclined to edit my `tsconfig.json` and set `module` to `esnext`, which in turn forced me to set `moduleResolution` to `node` and finally add `type: module` to my `package.json`. What I failed to realize (and IMO they shouldn't suggest this in the error message-- you can just simply refactor the top-level await out), that this switches the module resolution strategy of NodeJS from CommonJS to ESM. This is actually a big deal for many reasons:
+
+* [ESM support is still experimental in ts-node](https://github.com/TypeStrong/ts-node)
+* [Mixing CJS and ESM modules may lead to problems](https://redfin.engineering/node-modules-at-war-why-commonjs-and-es-modules-cant-get-along-9617135eeca1)
+* [There are open issues with ESM support in NodeJS itself](https://github.com/nodejs/modules/issues/454)
+
+I feel that at this time (december 2020) the NodeJS ecosystem is still in transition from the classic CommonJS modules to the new ECMAScript modules. As a result other tech like ts-node or ts-node-dev are transitioning as well and support can be flaky. My advice is to stick with CommonJS until the dust has settled and these things "just work" out of the box.

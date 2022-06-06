@@ -1,0 +1,88 @@
+---
+layout: post
+title: Mockito, @BeforeEach and UnnecessaryStubbingException
+comments: true
+permalink: blog/solving-mockito-unnecessarystubbingexception-in-generic-beforeeach-setup-method/
+excerpt: How to define Mockito stubs in your generic setup method without triggering UnnecessaryStubbingException
+lang: en
+date: "2021-05-21"
+thumb: /assets/2021-05-21-splash.png
+tags:
+ - How-to
+ - Java
+ - Mockito
+ - JUnit
+---
+
+# The Scenario: Mockito & @BeforeEach
+
+Say you have a unit test class `FooFactoryTest` where the unit under test `FooFactory` is dependent on another class `BarDependency`. The dependency is mocked using Mockito and then setup with a generic stub that is run before every unit test, using JUnit's `@BeforeEach` annotation. Below is an example of how this code would look like:
+
+```java title=FooFactoryTest.java
+@ExtendWith(MockitoExtension.class)
+public class FooFactoryTest {
+
+    @Mock
+    private BarDependency barDependency;
+
+    @InjectMocks
+    private FooFactory unitUnderTest;
+
+    @BeforeEach
+    public void setup() {
+        when(barDependency.leftBar(any())).thenReturn(new Bar());
+        when(barDependency.rightBar(any())).thenReturn(new Bar());
+    }
+
+   ... many tests ...
+
+```
+
+The above setup will work perfectly for any unit test that will invoke these stubbed methods.
+
+However, if you have a unit test that does *not* invoke these stubbed methods, you will (unfortunately) trigger a `UnnecessaryStubbingException`
+
+# The Challenge: UnnecessaryStubbingException
+
+Your test will fail and the console output will read something like:
+
+```console title="Test Failure"
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at nl.devillers.mockito.FooFactoryTest.setup(FooFactoryTest.java:69)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+``` 
+
+By default, Mockito does not like it when you setup a mock that does not get used, which makes sense: mocks are there to setup specific preconditions for your test. If a mock isn't used, that means something fishy is going on. Either you hold a false preconception about the required preconditions for the test to pass *or* the actual implementation is doing something unexpected. Both are cause for concern and require further investigation.
+
+However, in the case of `FooFactoryTest` we are running into a different challenge: there is a generic mock that is used by all tests *except one* which is now failing because of that reason.
+
+# The Solution: Easy Way
+
+So how do we solve this?
+
+At a glance, there are a two options:
+
+- Move the generic mocks out of the `setup` method and place them in all that tests that require them. Great for maintaining strictness, but not very DRY. We would have to duplicate these mocks for every test.
+- Apply the `lenient()` option to these mocks, which effectively disables the mechanism that throws the `UnnecessaryStubbingException`. Great for staying DRY, but not so great for maintaining strictness.
+
+Both options are not very attractive, because it forces us to chose between DRY and strictness.
+
+So is there a third option?
+
+# The Solution: Right Way
+
+Turns out there is.
+
+We can avoid this check at the test-level by *resetting* the mock with the stub that is not being called. This is a bit of a work around, but it will allow us to pass the test without having to make the mock lenient for the entire test class or removing the mock entirely from the setup method. 
+
+To reset the `barDependency` mock, we add the following line of code to *the end of* the test that is failing with a `UnnecessaryStubbingException`.
+```java title="Place at the end (or beginning) of your test"
+Mockito.reset(barDependency);
+```
+
+If *none* of the stubs on `barDependency` are being used, we can also place this line at the beginning of the test together with the other arrangements, which is a little cleaner. Or alternately, put it at the top of the test method and then setup the stubs we *do* need. This essentially overrides whatever is being setup in the generic setup method.
+
+That's all folks!

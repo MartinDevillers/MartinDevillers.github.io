@@ -1,0 +1,42 @@
+---
+layout: post
+title: Quick debugging KnockoutJS in Chrome
+comments: true
+permalink: blog/quick-debugging-knockoutjs-in-chrome/
+redirect_from: /quick-debugging-knockoutjs-in-chrome/
+excerpt: How to quickly debug KnockoutJS templates in your browser using ko.dataFor($0) and ko.contextFor($0)
+lang: en
+date: "2013-12-14"
+thumb: /assets/14-12-2013-debugging-knockoutjs-with-chrome.png
+tags:
+ - How-to
+ - KnockoutJS
+---
+
+[KnockoutJS](https://knockoutjs.com/) is a kick-ass JavaScript framework for creating rich and interactive web sites. One caveat of KnockoutJS is that, after you have applied your viewmodel to your page, it may be hard to figure out what data went where. Fortunately, there's a quick trick to debugging live KnockoutJS views, right from your Chrome browser window!
+
+# Step by step guide
+
+ 1. For this guide, we will be using one of the [official KnockoutJS examples](https://knockoutjs.com/examples/contactsEditor.html).
+ 2. Say you want to see the data behind the second contact (Sensei Miyagi).
+ 3. Right-click the first input box of the second contact (the one with the text 'Sensei').
+ 4. Select 'Inspect element'. The Chrome Developer Toolbar will open.
+ 5. Open the JavaScript Console window. You can access the console by clicking the `>=` icon in the bottom-left of the Chrome Developer Toolbar, or by opening the "Console" tab in the Chrome Developer Toolbar, or by pressing `Ctrl+Shift+J`
+ 6. Type the following command and press Enter: `ko.dataFor($0)`
+ 7. You should now see the data that is bound to the second row. You can expand the data by pressing the little triangle left of the Object to navigate the object tree.
+ 8. Type the following command and press Enter: `ko.contextFor($0)`
+ 9. You should now see a complex object that contains the entire Knockout context including the root and all parents. This is useful when you are writing complex binding expressions and you want to experiment with different constructs.
+
+![Screenshot of the expected output of the Step by step guide](/assets/14-12-2013-debugging-knockoutjs-with-chrome.png)
+ 
+# What is this black magic?
+This trick is a combination of [Chrome's $0-$4 feature](https://developers.google.com/chrome-developer-tools/docs/commandline-api#0-4) and [KnockoutJS's utility methods](https://knockoutjs.com/documentation/unobtrusive-event-handling.html). In short, Chrome remembers which elements you have selected in the Chrome Developer Toolbar and exposes these elements under the alias `$0`, `$1`, `$2`, `$3`, `$4`. So when you right-click an element in your browser and select 'Inspect element', this element automagically becomes available under the alias `$0`. You can use this trick with KnockoutJS, AngularJS, jQuery or any other JavaScript framework.
+
+The other side of the trick is KnockoutJS's utility methods `ko.dataFor` and `ko.contextFor`:
+
+ - `ko.dataFor(element)` - returns the data that was available for binding against the element
+ - `ko.contextFor(element)` - returns the entire binding context that was available to the DOM element.
+ 
+Remember, Chrome's JavaScript Console is a fully functional JavaScript runtime environment. This means that you are not limited to just looking at variables. You can store the output of `ko.contextFor` and manipulate the viewmodel directly from the console. Try `var root = ko.contextFor($0).$root; root.addContact();` and see what happens :-)
+
+Happy debugging!

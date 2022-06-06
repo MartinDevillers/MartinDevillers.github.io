@@ -1,0 +1,29 @@
+---
+layout: post
+title: NextJS & Sharp library compatibility issue
+comments: true
+permalink: blog/nextjs-sharp-lib-compat-issue/
+excerpt: How to fix the latest NextJS release with Sharp for your system
+lang: en
+date: "2021-02-05"
+thumb: /assets/2021-02-05-splash.svg
+tags:
+ - NextJS
+ - TypeScript
+ - Sharp
+---
+
+**UPDATE**: NextJS [`v10.0.8`](https://github.com/vercel/next.js/releases/tag/v10.0.8) fixes [this issue](https://github.com/vercel/next.js/pull/22253)! If you're running into the above error: upgrade to the 10.0.8 (or beyond).
+
+For those of you running the latest greatest of NextJS -- you may run into the following error while upgrading: `Error: Cannot find module 'sharp'`
+
+```console title="npm run dev"
+info sharp Downloading https://github.com/lovell/sharp-libvips/releases/download/v8.10.5/libvips-8.10.5-win32-x64.tar.br 
+ERR! sharp getaddrinfo ENOTFOUND github.com 
+info sharp Attempting to build from source via node-gyp but this may fail due to the above error
+info sharp Please see https://sharp.pixelplumbing.com/install for required dependencies
+```
+
+So what is going on?
+
+The required `sharp` dependency introduced with NextJS `10.0.5` has broken builds that depend on the underlying libvips, which isn't there in various Linux distros. Vercel is working on making the dependency optional. Relevant PR [here](https://github.com/vercel/next.js/pull/21762) and [here](https://github.com/vercel/next.js/pull/20738). Related issue [here](https://github.com/vercel/next.js/issues/20456). This may be easier than trying to get libvips installed or compiled on your machine (I simply couldn't get it to work on my Amazon EC2 ARM-based machine). You can downgrade to NextJS `10.0.3` in the meantime. I think they'll fix it soon.

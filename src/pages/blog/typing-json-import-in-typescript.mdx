@@ -1,0 +1,55 @@
+---
+layout: post
+title: Typing JSON imports in TypeScript
+comments: true
+permalink: blog/typing-json-import-in-typescript/
+excerpt: How to extract types from JSON imports for great justice
+lang: en
+date: "2021-11-05"
+thumb: /assets/2021-11-05-splash.svg
+tags:
+ - How-to
+ - TypeScript
+ - NextJS
+---
+
+Say you have a project built with [NextJS](https://nextjs.org/), [React](https://reactjs.org/), [GraphQL](https://graphql.org/) and [TypeScript](https://www.typescriptlang.org/). 
+In this project, there is some static JSON data stored in `../data/applications.json`:
+
+```json title=applications.json
+[
+    {
+        "id": "elector-v3",
+        "name": "Tesla Auto Pilot Elector API",
+        "apiName": "tap-api-v3-elector",
+        "apiPath": "/tap/v3/elector"
+    },
+    {
+        "id": "clairvoyance-v2",
+        "name": "Tesla Auto Pilot Clairvoyance API",
+        "apiName": "tap-api-v2-clairvoyance",
+        "apiPath": "/tap/v2/clairvoyance"
+    },
+    ... and many more...
+]
+```
+
+With NextJS and TypeScript, you can import this data directly in a TS file:
+
+```typescript title=awesome.ts
+import applicationsData from "../data/applications.json"
+```
+
+You will notice when handling this data, TypeScript recognizes the shape of this data. 
+
+But what if you want to take it a step further and use this shape as a discrete type? For instance, to use in functions or in React componenets?
+
+# Type Alias to the rescue!
+
+Assuming that each object in your array has the same four properties, then `typeof applicationsData[0]` will get you the appropriate type. You can then use a [Type Alias](https://www.typescriptlang.org/docs/handbook/advanced-types.html#type-aliases) to create a proper name for this type:
+
+```typescript title=awesome.ts
+type ApplicationData = typeof applicationsData[0]
+```
+
+Remember: using the inferred type will work for basic use cases like this, where you control the data and its structure is stable. You're basically using the first element as a "sample" for all the data within your array. For cases where the structure is more volatile it's better to define your own type definition by hand. 

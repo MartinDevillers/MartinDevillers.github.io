@@ -1,0 +1,25 @@
+---
+layout: post
+title: When will AWS S3 delete expired objects?
+comments: true
+permalink: blog/when-will-aws-s3-delete-expired-objects/
+excerpt: I ran into an interesting "gotcha" this week with respect to the AWS S3 lifecycle policy
+lang: en
+date: "2019-10-01"
+thumb: /assets/2019-10-01-splash.svg
+tags:
+ - Q&A
+ - AWS
+ - S3
+---
+
+This week I ran into a production issue, because one of my Lambda's choked on the amount of objects in my S3 bucket, which is normally limited, due to a Lifecycle Policy I set on the bucket. Despite the policy, which should have automatically cleaned up any objects older than 24 hours, there were objects as old as a week in my bucket. So what was going on?
+
+Diving into the details of S3's Lifecycle Policy, it quickly became apparent that AWS only guarantees you will not be *billed* for expired objects. **AWS gives no guarantees when expired objects will actually be cleaned**. In my experience, this is *usually* a day within expiring -- except for this week. An inquiry at Amazon AWS Support confirmed this:
+
+> Thank you for the provided information, I have checked the LifeCycle Management for the eu-west-1 region and have noted that there has been a recent increase in the number of objects to be expired.
+As the LifeCycle Manager is asynchronous for all S3 Buckets the region, increases in the number of objects to be expired can introduce longer delays [1].
+
+So please be aware of this, when you're crafting your AWSome solutions!
+
+[1] https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-expire-general-considerations.html
