@@ -2,16 +2,27 @@ import { Project } from "types"
 
 export const projects: Project[] = [
   {
+    slug: "pge",
+    name: "Sherlock Rebuild",
+    role: "Lead Full-Stack Engineer",
+    client: "Pacific Gas and Electric Company",
+    date: "2023",
+    description:
+      "Mitigating wildfires in California by using drones and machine vision to assess the maintenance needs of over 100.000 miles of electric distribution lines.",
+    thumb: "/assets/projects/pge/pge-splash.jpg",
+    icon: "/assets/projects/pge/pge-vendor-logo.svg",
+    active: true,
+  },
+  {
     slug: "t-mobile",
     name: "Manhattan Initiative",
     role: "Senior Software Engineer",
     client: "T-Mobile US, Inc.",
-    date: "2021 - current",
+    date: "2021 - 2022",
     description:
       "Integrating the uncarrier in major smartphone vendors Apple and Samsung, enabling the next-generation of self-provisioning and auto-entitlement (e-SIM)",
     thumb: "/assets/projects/t-mobile/t-mobile-splash.jpg",
     icon: "/assets/projects/t-mobile/t-mobile-vendor-logo.svg",
-    active: true,
   },
   {
     slug: "coffeeseed",

@@ -24,7 +24,7 @@ const TpasPage: NextPage = () => (
       <ProjectSummary
         client="T-Mobile US, Inc."
         logo="/assets/projects/t-mobile/t-mobile-vendor-logo.svg"
-        date="2021 - current"
+        date="2021 - 2022"
         location="Bellevue, WA"
         country="🇺🇸"
         role="Senior Software Engineer"
@@ -80,7 +80,7 @@ const TpasPage: NextPage = () => (
         I enjoy working on this project as I believe that internet access should be as frictionless as possible.{" "}
       </MdxText>
       <AspectRatio ratio={16 / 9} mb={4}>
-        <iframe title="Dedicon" src="https://www.youtube.com/embed/MHlyCxLxFjg" allowFullScreen />
+        <iframe title="T-Mobile e-SIM" src="https://www.youtube.com/embed/MHlyCxLxFjg" allowFullScreen />
       </AspectRatio>
     </PageContainer>
   </Layout>

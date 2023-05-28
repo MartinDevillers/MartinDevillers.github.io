@@ -21,7 +21,7 @@ const CoffeeseedPage: NextPage = () => (
       </Heading>
       <Carousel images={images} />
       <ProjectSummary
-        client="Coffeseed LLC"
+        client="Coffeeseed LLC"
         logo="/assets/projects/coffeeseed/coffeseed-vendor-logo.png"
         date="2020 - 2021"
         location="Atlanta, GA"
