@@ -1,5 +1,6 @@
-import { SiTypescript, SiDotnet, SiReact, SiJava } from "react-icons/si"
+import { SiTypescript, SiDotnet, SiReact } from "react-icons/si"
 import { VscCode, VscJson, VscTerminal } from "react-icons/vsc"
+import { FaJava } from "react-icons/fa"
 import { Box, Flex, Icon, Spacer, Text, useColorModeValue } from "@chakra-ui/react"
 import Highlight, { defaultProps } from "prism-react-renderer"
 import theme from "prism-react-renderer/themes/nightOwl"
@@ -24,7 +25,7 @@ const getIconForLanguage = (language: string) => {
     case "csharp":
       return SiDotnet
     case "java":
-      return SiJava
+      return FaJava
     case "json":
       return VscJson
     case "xml":
