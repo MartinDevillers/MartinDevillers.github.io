@@ -5,14 +5,16 @@ import { Box, Flex, Icon, Spacer, Text, useColorModeValue } from "@chakra-ui/rea
 import Highlight, { defaultProps } from "prism-react-renderer"
 import theme from "prism-react-renderer/themes/nightOwl"
 import Prism from "prism-react-renderer/prism"
+import { spacing } from "utils/theme"
 
-// eslint-disable-next-line import/newline-after-import
-;(typeof global !== "undefined" ? global : (window as any)).Prism = Prism
+if (typeof global !== "undefined") {
+  global.Prism = Prism
+} else {
+  window.Prism = Prism
+}
 
 require("prismjs/components/prism-csharp")
 require("prismjs/components/prism-java")
-
-const spacing = { base: 4, md: 5, lg: 6 }
 
 export interface CodeBlockProps {
   children: React.ReactElement

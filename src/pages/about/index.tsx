@@ -3,14 +3,12 @@ import Layout from "components/Layout"
 import { MdxHeading1, MdxImage, MdxLink, MdxText } from "components/MdxComponents"
 import PageContainer from "components/PageContainer"
 import { NextPage } from "next"
-
-const spacing = { base: 4, md: 5, lg: 6 }
-const spacingDouble = { base: 8, md: 10, lg: 12 }
+import { fontSizeHeading, spacing, spacingDouble } from "utils/theme"
 
 const AboutIndexPage: NextPage = () => (
   <Layout title="About">
     <PageContainer>
-      <Heading as="h1" fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }} my={spacingDouble}>
+      <Heading as="h1" fontSize={fontSizeHeading} my={spacingDouble}>
         About
       </Heading>
       <SimpleGrid templateColumns={[null, null, "1fr 2fr"]} spacing="10">

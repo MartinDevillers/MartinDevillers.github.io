@@ -5,6 +5,7 @@ import { MdxLink, MdxListItem, MdxText, MdxUnorderedList } from "components/MdxC
 import PageContainer from "components/PageContainer"
 import ProjectSummary from "components/ProjectSummary"
 import { NextPage } from "next"
+import { fontSizeHeading, spacingDouble } from "utils/theme"
 
 const images = [
   { src: "/assets/projects/dedicon/dedicon-01.jpeg", title: "Project war room" },
@@ -22,7 +23,7 @@ const images = [
 const WingPage: NextPage = () => (
   <Layout title="Dedicon">
     <PageContainer>
-      <Heading as="h1" fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }} my={{ base: 8, md: 10, lg: 12 }}>
+      <Heading as="h1" fontSize={fontSizeHeading} my={spacingDouble}>
         Braille &amp; Audio Production
       </Heading>
       <Carousel images={images} />

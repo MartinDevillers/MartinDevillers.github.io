@@ -12,6 +12,7 @@ import {
 import { ReactNode } from "react"
 import { FaStackOverflow, FaGitAlt } from "react-icons/fa"
 import { BiPackage } from "react-icons/bi"
+import { fontSizeHeading } from "utils/theme"
 
 interface StatsCardProps {
   title: string
@@ -85,7 +86,7 @@ const HomeStats: React.FC = () => {
       }}
     >
       <Container maxW="3xl" centerContent justifyContent="center" h="100vh">
-        <Heading py={10} zIndex={1} textAlign="center" fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
+        <Heading py={10} zIndex={1} textAlign="center" fontSize={fontSizeHeading}>
           Keep calm and write code! 🤓
         </Heading>
         <SimpleGrid columns={{ base: 1, md: 3 }} spacing={{ base: 5, lg: 8 }}>

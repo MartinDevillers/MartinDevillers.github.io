@@ -4,6 +4,7 @@ import { Box, IconButton, useBreakpointValue } from "@chakra-ui/react"
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi"
 // And react-slick as our Carousel Lib
 import Slider from "react-slick"
+import { borderRadius, boxShadow } from "utils/theme"
 
 // Settings for the slider
 const settings = {
@@ -17,9 +18,6 @@ const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
 }
-
-const borderRadius = { base: "base", md: "md", lg: "lg" }
-const boxShadow = { base: "base", md: "md", lg: "lg" }
 
 export interface CarouselImage {
   title: string

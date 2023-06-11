@@ -4,9 +4,7 @@ import PageContainer from "components/PageContainer"
 import PostCard from "components/PostCard"
 import { Post } from "types"
 import { loadAllPosts } from "utils/posts"
-
-const fontSize = { base: "3xl", md: "4xl", lg: "5xl" }
-const spacingDouble = { base: 8, md: 10, lg: 12 }
+import { fontSize, fontSizeHeading, lineHeight, spacing, spacingDouble } from "utils/theme"
 
 export const getStaticProps = async () => {
   return {
@@ -23,10 +21,10 @@ interface BlogIndexPageProps {
 const BlogIndexPage: React.FC<BlogIndexPageProps> = ({ posts }) => (
   <Layout title="Blog">
     <PageContainer>
-      <Heading as="h1" fontSize={fontSize} my={spacingDouble}>
+      <Heading as="h1" fontSize={fontSizeHeading} my={spacingDouble}>
         Blog
       </Heading>
-      <Text fontSize={{ md: "lg", lg: "xl" }} lineHeight={{ md: "tall", lg: 1.75 }} mb={{ base: 4, md: 5, lg: 6 }}>
+      <Text fontSize={fontSize} lineHeight={lineHeight} mb={spacing}>
         Welcome to my engineering blog! On this page you will find various brief posts I&rsquo;ve written over the
         years. Most of these posts focus on specific engineering challenges I&rsquo;ve faced, but some posts also cover
         events like awards I&rsquo;ve won or conferences I&rsquo;ve attended. I also use this space to crosspost my

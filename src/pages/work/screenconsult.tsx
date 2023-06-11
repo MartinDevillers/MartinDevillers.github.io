@@ -5,6 +5,7 @@ import { MdxHeading1, MdxLink, MdxText } from "components/MdxComponents"
 import PageContainer from "components/PageContainer"
 import ProjectSummary from "components/ProjectSummary"
 import { NextPage } from "next"
+import { fontSizeHeading, spacingDouble } from "utils/theme"
 
 const images = [
   { src: "/assets/projects/screenconsult/screenconsult-03.jpg", title: "ScreenConsult" },
@@ -15,7 +16,7 @@ const images = [
 const ScreenConsultPage: NextPage = () => (
   <Layout title="ScreenConsult">
     <PageContainer>
-      <Heading as="h1" fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }} my={{ base: 8, md: 10, lg: 12 }}>
+      <Heading as="h1" fontSize={fontSizeHeading} my={spacingDouble}>
         ScreenConsult E-Consult Solution
       </Heading>
       <Carousel images={images} />

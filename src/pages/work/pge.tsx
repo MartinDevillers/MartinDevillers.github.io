@@ -5,17 +5,24 @@ import { MdxHeading1, MdxLink, MdxListItemTrophy, MdxText, MdxUnorderedList } fr
 import PageContainer from "components/PageContainer"
 import ProjectSummary from "components/ProjectSummary"
 import { NextPage } from "next"
+import { fontSizeHeading, spacingDouble } from "utils/theme"
 
 const images = [
-  { src: "/assets/projects/pge/pge-01.jpg", title: "Electric distribution" },
-  { src: "/assets/projects/pge/pge-02.jpg", title: "PG&E century old general office building and annex" },
-  { src: "/assets/projects/pge/pge-03.jpg", title: "Maintenance crew working on power lines" },
+  { src: "/assets/projects/pge/pge-01.jpg", title: "Electric distribution (Matthew Henry @matthewhenry)" },
+  {
+    src: "/assets/projects/pge/pge-02.jpg",
+    title: "PG&E century old general office building and annex (AP Photo/Jeff Chiu)",
+  },
+  {
+    src: "/assets/projects/pge/pge-03.jpg",
+    title: "Maintenance crew working on power lines (Kreuzschnabel/Wikimedia Commons)",
+  },
 ]
 
 const PgePage: NextPage = () => (
   <Layout title="Pacific Gas and Electric Company">
     <PageContainer>
-      <Heading as="h1" fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }} my={{ base: 8, md: 10, lg: 12 }}>
+      <Heading as="h1" fontSize={fontSizeHeading} my={spacingDouble}>
         Sherlock Rebuild
       </Heading>
       <Carousel images={images} />

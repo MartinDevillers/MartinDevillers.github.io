@@ -4,6 +4,7 @@ import Head from "next/head"
 import { FrontMatter } from "types"
 import Layout from "components/Layout"
 import { MDXProps } from "mdx/types"
+import { fontSizeHeading, lineHeight, spacing, spacingDouble } from "utils/theme"
 
 export interface PostProps extends FrontMatter, MDXProps {
   children: React.ReactNode
@@ -14,13 +15,9 @@ interface PostMetaProps {
   tags: string[]
 }
 
-const fontSize = { base: "3xl", md: "4xl", lg: "5xl" }
-const spacing = { base: 4, md: 5, lg: 6 }
-const spacingDouble = { base: 8, md: 10, lg: 12 }
 const marginTopTitle = { base: 14, lg: 20 }
 
 const fontSizeSub = { md: "md", lg: "lg" }
-const lineHeight = { md: "tall", lg: 1.75 }
 
 const formatDate = (date: string) => format(parseISO(date), "PPP")
 
@@ -51,7 +48,7 @@ const Post: React.FC<PostProps> = ({ children, title, excerpt, date, tags }) => 
       <meta name="keywords" key="keywords" content={tags?.join(", ")} />
     </Head>
     <Container maxW="7xl" flex="1 0 auto" py={8} mt={marginTopTitle} as="article">
-      <Heading as="h1" fontSize={fontSize} my={spacingDouble}>
+      <Heading as="h1" fontSize={fontSizeHeading} my={spacingDouble}>
         {title}
       </Heading>
       {date && <PostMeta date={date} tags={tags || []} />}

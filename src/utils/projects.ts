@@ -2,6 +2,18 @@ import { Project } from "types"
 
 export const projects: Project[] = [
   {
+    slug: "millennium",
+    name: "FIC&RT",
+    role: "Software Engineer",
+    client: "Millennium",
+    date: "2023",
+    description:
+      "Working alongside some of the brightest minds in the finance and technology industry as we seek to pursue a diverse array of investment strategies.",
+    thumb: "/assets/projects/millennium/millennium-splash.jpg",
+    icon: "/assets/projects/millennium/millennium-vendor-logo.svg",
+    active: true,
+  },
+  {
     slug: "pge",
     name: "Sherlock Rebuild",
     role: "Lead Full-Stack Engineer",
@@ -11,7 +23,6 @@ export const projects: Project[] = [
       "Mitigating wildfires in California by using drones and machine vision to assess the maintenance needs of over 100.000 miles of electric distribution lines.",
     thumb: "/assets/projects/pge/pge-splash.jpg",
     icon: "/assets/projects/pge/pge-vendor-logo.svg",
-    active: true,
   },
   {
     slug: "t-mobile",

@@ -1,24 +1,9 @@
-import {
-  Stat,
-  useColorModeValue,
-  Flex,
-  Box,
-  StatLabel,
-  StatNumber,
-  SimpleGrid,
-  Avatar,
-  Icon,
-  Text,
-} from "@chakra-ui/react"
-import { GoCalendar, GoPerson } from "react-icons/go"
+import { Stat, useColorModeValue, Flex, Box, StatLabel, StatNumber, SimpleGrid, Avatar, Text } from "@chakra-ui/react"
 import { useBreakpointValue } from "@chakra-ui/media-query"
+import { borderRadius, boxShadow, spacing } from "utils/theme"
 
 const fontSize = { base: "md", lg: "xl" }
 const logoSize = { base: "md", lg: "md" }
-const iconSize = { base: "2em", lg: "3em" }
-const spacing = { base: 4, md: 5, lg: 6 }
-const borderRadius = { base: "base", md: "md", lg: "lg" }
-const boxShadow = { base: "base", md: "md", lg: "lg" }
 
 interface StatsCardProps {
   title: string
@@ -28,15 +13,15 @@ interface StatsCardProps {
 
 const StatsCard: React.FC<StatsCardProps> = ({ title, stat, icon }) => (
   <Stat
-    px={{ base: 2, md: 4 }}
-    py="5"
+    px={{ base: 4, md: 6 }}
+    py={{ base: 3, md: 5 }}
     shadow={boxShadow}
     border="1px solid"
     borderColor={useColorModeValue("gray.800", "gray.500")}
     rounded={borderRadius}
   >
     <Flex justifyContent="space-between">
-      <Box pl={{ base: 2, md: 4 }}>
+      <Box>
         <StatLabel fontWeight="medium" color={useColorModeValue("gray.800", "gray.500")} isTruncated>
           {title}
         </StatLabel>
@@ -44,7 +29,13 @@ const StatsCard: React.FC<StatsCardProps> = ({ title, stat, icon }) => (
           {stat}
         </StatNumber>
       </Box>
-      <Box my="auto" color={useColorModeValue("gray.800", "gray.200")} alignContent="center">
+      <Box
+        w={12}
+        my="auto"
+        color={useColorModeValue("gray.800", "gray.200")}
+        alignContent="center"
+        textAlign={{ base: "center", md: "right" }}
+      >
         {icon}
       </Box>
     </Flex>
@@ -67,14 +58,9 @@ const ProjectSummary: React.FC<ProjectSummaryProps> = ({ client, logo, role, dat
       stat={client}
       icon={<Avatar src={logo} name={client} bgColor="white" size={useBreakpointValue(logoSize)} />}
     />
-    <StatsCard title="Role" stat={role} icon={<Icon as={GoPerson} boxSize={iconSize} />} />
-    <StatsCard title="Date" stat={date} icon={<Icon as={GoCalendar} boxSize={iconSize} />} />
-    <StatsCard
-      title="Location"
-      stat={location}
-      // icon={<Icon as={GoLocation} boxSize={iconSize} />}
-      icon={<Text fontSize="4xl">{country}</Text>}
-    />
+    <StatsCard title="Role" stat={role} icon={<Text fontSize="4xl">👨‍💻</Text>} />
+    <StatsCard title="Date" stat={date} icon={<Text fontSize="4xl">📅</Text>} />
+    <StatsCard title="Location" stat={location} icon={<Text fontSize="4xl">{country}</Text>} />
   </SimpleGrid>
 )
 

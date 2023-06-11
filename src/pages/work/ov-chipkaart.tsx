@@ -5,6 +5,7 @@ import { MdxLink, MdxListItem, MdxText, MdxUnorderedList } from "components/MdxC
 import PageContainer from "components/PageContainer"
 import ProjectSummary from "components/ProjectSummary"
 import { NextPage } from "next"
+import { fontSizeHeading, spacingDouble } from "utils/theme"
 
 const images = [
   { src: "/assets/projects/ov-chipkaart/ov-chipkaart-03.jpg", title: "OV chip card gates" },
@@ -16,7 +17,7 @@ const images = [
 const OvChipkaartPage: NextPage = () => (
   <Layout title="OV-chipkaart">
     <PageContainer>
-      <Heading as="h1" fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }} my={{ base: 8, md: 10, lg: 12 }}>
+      <Heading as="h1" fontSize={fontSizeHeading} my={spacingDouble}>
         ov-chipkaart.nl
       </Heading>
       <Carousel images={images} />

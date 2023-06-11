@@ -8,6 +8,8 @@ import PostCard from "components/PostCard"
 import HomeClients from "components/HomeClients"
 import HomeTechs from "components/HomeTechs"
 import { Post } from "types"
+import { MdxLink } from "components/MdxComponents"
+import { spacingDouble, spacing, fontSizeHeading } from "utils/theme"
 
 export const getStaticProps = async () => {
   return {
@@ -16,9 +18,6 @@ export const getStaticProps = async () => {
     },
   }
 }
-
-const spacing = { base: 4, md: 5, lg: 6 }
-const spacingDouble = { base: 8, md: 10, lg: 12 }
 
 interface HomeProps {
   posts: Post[]
@@ -31,7 +30,7 @@ const Home: React.FC<HomeProps> = ({ posts }) => (
         <Heading fontSize={{ base: "4xl", md: "5xl", lg: "6xl" }}>Hi there! 👋</Heading>
         <Text fontSize={{ base: "lg", md: "xl", lg: "2xl" }}>
           My name is Martin Devillers and I’m a quirky Software Engineer from Amsterdam, The Netherlands. I live in
-          Miami, Florida, where I work remotely for a variety of clients across the USA.
+          Miami, Florida, where I work for <MdxLink href="https://www.mlp.com">Millennium</MdxLink>.
         </Text>
       </Stack>
     </Container>
@@ -39,13 +38,13 @@ const Home: React.FC<HomeProps> = ({ posts }) => (
     <HomeStats />
     <HomeClients />
     <Container maxW="7xl" minH="100vh">
-      <Heading as="h1" fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }} mt={spacingDouble} mb={spacing}>
+      <Heading as="h1" fontSize={fontSizeHeading} mt={spacingDouble} mb={spacing}>
         I am working on:
       </Heading>
       <SimpleGrid columns={[null, 1, 2, 3]} spacing={10}>
         <ProjectCard {...projects[0]} />
       </SimpleGrid>
-      <Heading as="h1" fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }} mt={spacingDouble} mb={spacing}>
+      <Heading as="h1" fontSize={fontSizeHeading} mt={spacingDouble} mb={spacing}>
         I am writing about:
       </Heading>
       <SimpleGrid columns={[null, 1, 2, 3]} spacing={10} mb={spacingDouble}>

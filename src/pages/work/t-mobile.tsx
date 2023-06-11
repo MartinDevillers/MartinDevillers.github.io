@@ -5,19 +5,20 @@ import { MdxHeading1, MdxLink, MdxListItemTrophy, MdxText, MdxUnorderedList } fr
 import PageContainer from "components/PageContainer"
 import ProjectSummary from "components/ProjectSummary"
 import { NextPage } from "next"
+import { fontSizeHeading, spacingDouble } from "utils/theme"
 
 const images = [
-  { src: "/assets/projects/t-mobile/t-mobile-05.jpg", title: "Apple, a T-Mobile partner" },
-  { src: "/assets/projects/t-mobile/t-mobile-01.jpg", title: "T-Mobile Logo" },
-  { src: "/assets/projects/t-mobile/t-mobile-02.jpg", title: "5G for everyone" },
-  { src: "/assets/projects/t-mobile/t-mobile-03.jpg", title: "Connecting the USA" },
-  { src: "/assets/projects/t-mobile/t-mobile-04.jpg", title: "Cross company integration" },
+  { src: "/assets/projects/t-mobile/t-mobile-05.jpg", title: "Apple, a T-Mobile partner (Trac Vu @tracminhvu)" },
+  { src: "/assets/projects/t-mobile/t-mobile-01.jpg", title: "T-Mobile Logo (Mika Baumeister @mbaumi)" },
+  { src: "/assets/projects/t-mobile/t-mobile-02.jpg", title: "5G for everyone (Frederik Lipfert @frederikli)" },
+  { src: "/assets/projects/t-mobile/t-mobile-03.jpg", title: "Connecting the USA (Mario Caruso @giggiulena)" },
+  { src: "/assets/projects/t-mobile/t-mobile-04.jpg", title: "Cross company integration (Ildefonso Polo @i_m_polo)" },
 ]
 
 const TpasPage: NextPage = () => (
   <Layout title="T-Mobile">
     <PageContainer>
-      <Heading as="h1" fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }} my={{ base: 8, md: 10, lg: 12 }}>
+      <Heading as="h1" fontSize={fontSizeHeading} my={spacingDouble}>
         The Manhattan Initiative
       </Heading>
       <Carousel images={images} />

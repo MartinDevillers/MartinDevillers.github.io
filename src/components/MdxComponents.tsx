@@ -24,15 +24,9 @@ import {
   TextProps,
 } from "@chakra-ui/react"
 import { FaCaretRight, FaTrophy } from "react-icons/fa"
+import { spacing, fontSize, lineHeight, spacingDouble, borderRadius, boxShadow } from "utils/theme"
 import CodeBlock, { CodeBlockProps } from "./CodeBlock"
 import Post, { PostProps } from "./Post"
-
-const fontSize = { md: "lg", lg: "xl" }
-const lineHeight = { md: "tall", lg: 1.75 }
-const spacing = { base: 4, md: 5, lg: 6 }
-const spacingDouble = { base: 8, md: 10, lg: 12 }
-const borderRadius = { base: "base", md: "md", lg: "lg" }
-const boxShadow = { base: "base", md: "md", lg: "lg" }
 
 export const MdxText: React.FC<TextProps> = (props) => (
   <Text

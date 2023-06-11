@@ -5,6 +5,7 @@ import { MdxHeading1, MdxLink, MdxListItemTrophy, MdxText, MdxUnorderedList } fr
 import PageContainer from "components/PageContainer"
 import ProjectSummary from "components/ProjectSummary"
 import { NextPage } from "next"
+import { fontSizeHeading, spacingDouble } from "utils/theme"
 
 const images = [
   { src: "/assets/projects/infosupport/infosupport-splash.jpg", title: "Product team" },
@@ -18,7 +19,7 @@ const images = [
 const KanziPage: NextPage = () => (
   <Layout title="Kanzi">
     <PageContainer>
-      <Heading as="h1" fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }} my={{ base: 8, md: 10, lg: 12 }}>
+      <Heading as="h1" fontSize={fontSizeHeading} my={spacingDouble}>
         Kanzi AI-powered Survey Tool
       </Heading>
       <Carousel images={images} />
