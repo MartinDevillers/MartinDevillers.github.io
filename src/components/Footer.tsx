@@ -1,57 +1,32 @@
-import { ReactNode } from "react"
-import { Box, chakra, Container, Stack, Text, useColorModeValue, VisuallyHidden } from "@chakra-ui/react"
-import { FaStackOverflow, FaGithub, FaLinkedinIn } from "react-icons/fa"
+import { FaGithub, FaLinkedinIn, FaStackOverflow } from "react-icons/fa"
 
-const SocialButton: React.FC<{ children: ReactNode; label: string; href: string }> = ({ children, label, href }) => {
-  return (
-    <chakra.button
-      bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
-      rounded="full"
-      w={8}
-      h={8}
-      cursor="pointer"
-      as="a"
-      href={href}
-      target="_blank"
-      display="inline-flex"
-      alignItems="center"
-      justifyContent="center"
-      transition="background 0.3s ease"
-      _hover={{
-        bg: useColorModeValue("brand.100", "brand.600"),
-      }}
-    >
-      <VisuallyHidden>{label}</VisuallyHidden>
-      {children}
-    </chakra.button>
-  )
-}
+const socialLinks = [
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/devillers", Icon: FaLinkedinIn },
+  { label: "GitHub", href: "https://github.com/MartinDevillers", Icon: FaGithub },
+  { label: "StackOverflow", href: "https://stackoverflow.com/users/546967/martin-devillers", Icon: FaStackOverflow },
+]
 
 const Footer: React.FC = () => (
-  <Box bg={useColorModeValue("gray.50", "gray.900")} color={useColorModeValue("gray.700", "gray.200")}>
-    <Container
-      as={Stack}
-      maxW="7xl"
-      py={4}
-      direction={{ base: "column", md: "row" }}
-      spacing={4}
-      justify={{ base: "center", md: "space-between" }}
-      align={{ base: "center", md: "center" }}
-    >
-      <Text>© 2022 Martin Devillers. All rights reserved</Text>
-      <Stack direction="row" spacing={6}>
-        <SocialButton label="GitHub" href="https://github.com/MartinDevillers">
-          <FaGithub />
-        </SocialButton>
-        <SocialButton label="StackOverflow" href="https://stackoverflow.com/users/546967/martin-devillers">
-          <FaStackOverflow />
-        </SocialButton>
-        <SocialButton label="LinkedIn" href="https://www.linkedin.com/in/devillers">
-          <FaLinkedinIn />
-        </SocialButton>
-      </Stack>
-    </Container>
-  </Box>
+  <footer className="border-t border-zinc-200/80 py-8 dark:border-zinc-800/80">
+    <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-4 text-sm text-zinc-600 dark:text-zinc-400 md:flex-row md:items-center md:justify-between md:px-8">
+      <p>© {new Date().getFullYear()} Martin Devillers.</p>
+      <div className="flex items-center gap-2 md:justify-end">
+        {socialLinks.map((social) => (
+          <a
+            key={social.href}
+            href={social.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={social.label}
+            title={social.label}
+            className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-zinc-300/80 text-zinc-700 transition hover:border-brand-500 hover:text-brand-600 dark:border-zinc-700 dark:text-zinc-200 dark:hover:border-brand-400 dark:hover:text-brand-300"
+          >
+            <social.Icon className="text-sm" aria-hidden="true" />
+          </a>
+        ))}
+      </div>
+    </div>
+  </footer>
 )
 
 export default Footer

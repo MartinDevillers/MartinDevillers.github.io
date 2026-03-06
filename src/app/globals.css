@@ -1,0 +1,69 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --font-heading: "Noto Serif", serif;
+  --font-body: "Roboto", sans-serif;
+
+  --color-brand-50: #f4ebf7;
+  --color-brand-100: #e4d3eb;
+  --color-brand-200: #cfb0da;
+  --color-brand-300: #b98dc9;
+  --color-brand-400: #9564ad;
+  --color-brand-500: #672a7b;
+  --color-brand-600: #5d2670;
+  --color-brand-700: #4e205e;
+  --color-brand-800: #3e1a4b;
+  --color-brand-900: #2b1234;
+  --color-brand-950: #18091e;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background: rgb(250 250 250);
+  color: rgb(24 24 27);
+  font-family: var(--font-body), sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+.dark body {
+  background: rgb(9 9 11);
+  color: rgb(244 244 245);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading), serif;
+}
+
+iframe,
+video {
+  border: 0;
+}
+
+.mdx-content .video-wrapper {
+  position: relative;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.75rem;
+}
+
+/* light theme */
+.light {
+  @import "./prism-vs.css";
+}
+
+/* dark theme */
+.dark {
+  @import "./prism-vsc-dark-plus.css";
+}
