@@ -147,6 +147,53 @@ export const MdxImage: React.FC<React.ImgHTMLAttributes<HTMLImageElement>> = ({ 
   />
 )
 
+export const MdxTable: React.FC<React.TableHTMLAttributes<HTMLTableElement>> = ({ children, className, ...props }) => (
+  <div className="mb-6 overflow-x-auto">
+    <table
+      className={cn(
+        "w-full border-collapse overflow-hidden rounded-xl border border-zinc-200/80 text-left text-sm dark:border-zinc-800/80",
+        className
+      )}
+      {...props}
+    >
+      {children}
+    </table>
+  </div>
+)
+
+export const MdxTableHead: React.FC<React.HTMLAttributes<HTMLTableSectionElement>> = ({ children, className, ...props }) => (
+  <thead className={cn("bg-zinc-100/80 dark:bg-zinc-900/80", className)} {...props}>
+    {children}
+  </thead>
+)
+
+export const MdxTableBody: React.FC<React.HTMLAttributes<HTMLTableSectionElement>> = ({ children, className, ...props }) => (
+  <tbody className={className} {...props}>
+    {children}
+  </tbody>
+)
+
+export const MdxTableRow: React.FC<React.HTMLAttributes<HTMLTableRowElement>> = ({ children, className, ...props }) => (
+  <tr className={cn("border-b border-zinc-200/80 last:border-0 dark:border-zinc-800/80", className)} {...props}>
+    {children}
+  </tr>
+)
+
+export const MdxTableHeaderCell: React.FC<React.ThHTMLAttributes<HTMLTableCellElement>> = ({ children, className, ...props }) => (
+  <th
+    className={cn("px-4 py-3 font-semibold text-zinc-900 dark:text-zinc-100", className)}
+    {...props}
+  >
+    {children}
+  </th>
+)
+
+export const MdxTableCell: React.FC<React.TdHTMLAttributes<HTMLTableCellElement>> = ({ children, className, ...props }) => (
+  <td className={cn("px-4 py-3 align-top text-zinc-700 dark:text-zinc-300", className)} {...props}>
+    {children}
+  </td>
+)
+
 const MdxCodeBlock: React.FC<React.HTMLAttributes<HTMLPreElement>> = ({ className, children, ...props }) => {
   const codeNode = isValidElement<CodeElementProps>(children) ? children : null
   const rawCode = flattenText(codeNode?.props.children ?? children)
@@ -198,6 +245,12 @@ const mdxComponents: MDXComponents = {
   ol: MdxOrderedList,
   li: MdxListItem,
   img: MdxImage,
+  table: MdxTable,
+  thead: MdxTableHead,
+  tbody: MdxTableBody,
+  tr: MdxTableRow,
+  th: MdxTableHeaderCell,
+  td: MdxTableCell,
   pre: MdxCodeBlock,
   code: MdxInlineCode,
   SimpleGrid,
