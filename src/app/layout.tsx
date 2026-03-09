@@ -9,8 +9,10 @@ import "@fontsource/roboto/500.css"
 import "@fontsource/roboto/700.css"
 import "./globals.css"
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.devillers.nl"
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.devillers.nl"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Martin Devillers · Software Engineer",
     template: "%s · Martin Devillers",
@@ -30,12 +32,17 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  alternates: {
+    types: {
+      "application/rss+xml": `${siteUrl}/rss.xml`,
+    },
+  },
   openGraph: {
     type: "website",
     title: "Martin Devillers · Software Engineer",
     description:
       "I am a software engineer that enjoys helping organizations with the design and implementation of elegant yet powerful IT-solutions.",
-    url: "https://www.devillers.nl",
+    url: siteUrl,
     siteName: "Martin Devillers",
   },
 }
