@@ -1,0 +1,148 @@
+---
+layout: post
+title: Farewell Stack Overflow
+comments: true
+permalink: blog/farewell-stack-overflow/
+excerpt: A data-first goodbye to Stack Overflow, from platform-wide decline to my own 18k reputation journey.
+lang: en
+date: "2026-03-09"
+thumb: /assets/2026-03-09-stackoverflow-thumb.png
+tags:
+  - Stack Overflow
+  - Data
+  - Career
+  - Reflection
+---
+
+You know what they say, *"a time-series chart is worth a thousand words"*:
+
+<StackOverflowTimeseriesChart csvPath="/assets/2026-03-09-stackoverflow-monthly-post-counts.csv" />
+
+The above chart tells a clear story about Stack Overflow's popularity. The site-wide monthly Q+A volume peaked in **March 2014** at **664,154** posts (questions + answers, including deleted). The latest complete month in this dataset (**February 2026**) is **11,280** posts.
+
+That is a **98.3% drop** from peak monthly activity.
+
+Stack Overflow's decline appears to have started around the COVID-19 period and accelerated further with the arrival of LLMs.
+
+The chart above is based on this Data StackExchange query and CSV export:
+
+- Query: [Stack Overflow monthly post counts: Questions vs Answers (including deleted)](https://data.stackexchange.com/stackoverflow/query/1940839/stack-overflow-monthly-post-counts-questions-vs-answers-including-deleted)
+- CSV: [QueryResults.csv](https://data.stackexchange.com/stackoverflow/csv/2384229) ([our copy](/assets/2026-03-09-stackoverflow-monthly-post-counts.csv))
+
+For completeness, this is the exact query used:
+
+```sql
+SELECT
+    DATEFROMPARTS(YEAR(CreationDate), MONTH(CreationDate), 1) AS Month,
+    SUM(CASE WHEN PostTypeId = 1 THEN 1 ELSE 0 END) AS Questions,
+    SUM(CASE WHEN PostTypeId = 2 THEN 1 ELSE 0 END) AS Answers
+FROM PostsWithDeleted
+WHERE PostTypeId IN (1,2)
+GROUP BY
+    YEAR(CreationDate),
+    MONTH(CreationDate)
+ORDER BY
+    Month
+```
+
+## My personal Stack Overflow journey
+
+[Click here to view my profile on Stack Overflow](https://stackoverflow.com/users/546967/martin-devillers)
+
+For years, Stack Overflow was part of my daily engineering loop. I asked questions, provided answers, and got a lot back from the community.
+
+For a while, I was in the **top 1% contributors by reputation**. I proudly put the 18k+ reputation milestone on LinkedIn and in my own bio here on devillers.nl. I still consider that an achievement worth mentioning.
+
+Over the years, engineers in my network would message me that they had stumbled upon one of my answers and it fixed their issue.
+
+I even stumbled upon my own answer once or twice.
+
+Some of the more popular answers became blog posts on this site, for example:
+
+- [Improving DbEntityValidationException](https://devillers.nl/blog/improving-dbentityvalidationexception)
+- [Mockito, @BeforeEach and UnnecessaryStubbingException](https://devillers.nl/blog/solving-mockito-unnecessarystubbingexception-in-generic-beforeeach-setup-method)
+- [Nodejs, TypeScript, ts-node-dev & top-level await](https://devillers.nl/blog/nodejs-typescript-ts-node-dev-top-level-await)
+
+Let's crunch some more data.
+
+## Personal stats
+
+Snapshot as of **March 9, 2026**:
+
+| Metric | Value |
+| --- | ---: |
+| Reputation | 18,092 |
+| People reached | ~1.7 million |
+| Answers | 174 |
+| Questions | 20 |
+| Total posts | 194 |
+| Answer ratio | 89.7% |
+| Badges | 7 gold, 53 silver, 94 bronze |
+| Member duration | 15 years, 2 months |
+| Visited days | 3008 |
+
+Focusing on my tenure and daily activity:
+
+- Joined period analyzed: **2011-01-09 to 2026-03-09** (15 years, 2 months)
+- Total calendar days in that window: **5539**
+- Business days (Mon-Fri) in that window: **3956**
+- Days visited: **3008**
+
+That means:
+
+- I visited Stack Overflow on **54.3% of all days** in that span.
+- I visited Stack Overflow on **76.0% of business days** in that span.
+
+In other words, over the last 15 years of my life I visited Stack Overflow **every other day**.
+
+I don't what that means, but it must mean something, right? 😬
+
+## Let's go a little deeper
+
+Stack Overflow has many hidden/niche features. One of them is the "visit history", which is this little jQuery DatePicker that pops up when you click the "Visited x days" on your personal profile. Embedded within this widget is a **full history** of every single day you visited Stack Overflow. To grab this data, you take the following URL `https://stackoverflow.com/users/daily-site-access/546967`, substitute the user ID for your own and fetch the raw HTML. On line 3 you will see a variable `visited` with your visit history in the following format:
+
+```javascript
+var visited = {2010:{12:{18:1,19:1,24:1}},2011:{1:{17:1,20:1},2:{12:1},3:{13:1,15:1,16:1,17:1,28:
+```
+
+Leave it to the SO devs to use a sparse three-dimensional map keyed by (year, month, day) as a data structure for space-efficient storage and fast lookups.
+
+This data structure encodes dates in a Year → Month → Day hierarchy.
+
+```
+visited
+ └── Year (2010, 2011)
+      └── Month (1–12)
+           └── Day (1–31)
+                └── Value (1)
+```
+
+Example lookup:
+
+```javascript
+visited[2010][12][18] === 1
+```
+
+Which means that on **December 18, 2010** I visited Stack Overflow.
+
+Armed with this full history, I can visualize my visits using a neat per-month heatmap:
+
+<StackOverflowVisitedHeatmap jsonPath="/assets/2026-03-09-stackoverflow-visited.json" />
+
+## End of an era
+
+Like many engineers, I used Stack Overflow less and less.
+
+Part of that is positive: tooling and online resources improved, open-source ecosystems matured, and increasingly I could just read the source code directly.
+
+Then LLMs arrived. For day-to-day implementation work, they became my go-to source for typical engineering Q&A and much more. That further reduced how often I used Stack Overflow.
+
+I have immense respect for what Stack Overflow gave the industry, and I feel privileged to have been part of it. A lot of that knowledge, including some of my own answers, now also shows up through LLMs.
+
+If you open your favorite AI tool and ask, "How can I see the validation errors from DbEntityValidationException?", it will usually return my approach, sometimes even including my sassy remarks that its default behavior is frustrating.
+
+Stack Overflow gave LLMs a massive high-quality training set with 18 years of collective engineering knowledge. The open question now is how we keep building shared, durable technical knowledge as usage shifts to LLMs.
+
+Farewell, Stack Overflow.
+
+Thanks for the years.

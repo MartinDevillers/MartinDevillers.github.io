@@ -6,10 +6,13 @@ import "prismjs/components/prism-csharp"
 import "prismjs/components/prism-java"
 import "prismjs/components/prism-json"
 import "prismjs/components/prism-jsx"
+import "prismjs/components/prism-sql"
 import "prismjs/components/prism-tsx"
 import "prismjs/components/prism-typescript"
 import { Children, isValidElement } from "react"
 import { cn } from "@/lib/cn"
+import StackOverflowTimeseriesChart from "@/components/stack-overflow-timeseries-chart"
+import StackOverflowVisitedHeatmap from "@/components/stack-overflow-visited-heatmap"
 
 interface BaseProps {
   children?: React.ReactNode
@@ -37,6 +40,10 @@ const LANGUAGE_ALIASES: Record<string, string> = {
   shell: "bash",
   sh: "bash",
   terminal: "bash",
+  postgres: "sql",
+  postgresql: "sql",
+  mysql: "sql",
+  tsql: "sql",
   ts: "typescript",
   tsx: "tsx",
   xml: "markup",
@@ -254,6 +261,8 @@ const mdxComponents: MDXComponents = {
   pre: MdxCodeBlock,
   code: MdxInlineCode,
   SimpleGrid,
+  StackOverflowTimeseriesChart,
+  StackOverflowVisitedHeatmap,
 }
 
 export default mdxComponents

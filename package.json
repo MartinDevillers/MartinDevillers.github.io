@@ -12,6 +12,8 @@
   "dependencies": {
     "@fontsource/noto-serif": "^5.2.9",
     "@fontsource/roboto": "^5.2.10",
+    "@nivo/heatmap": "^0.99.0",
+    "@nivo/line": "^0.99.0",
     "@tailwindcss/typography": "^0.5.19",
     "date-fns": "^4.1.0",
     "gray-matter": "^4.0.3",
